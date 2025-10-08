@@ -1,26 +1,152 @@
 @import "tailwindcss";
 
+/* --------------------------------------------------
+  1. TAILWIND V4 @THEME DEFINITION
+  --------------------------------------------------
+  Defines all tokens using the correct Tailwind v4 syntax.
+*/
+@theme {
+  --font-sans: var(--font-poppins), "Poppins", sans-serif;
+  --font-display: var(--font-poppins), "Poppins", sans-serif;
+
+  /* --- TYPOGRAPHY SCALE --- */
+  --font-size-h1: 5rem;
+  --line-height-h1: 5rem;
+  --font-size-h2: 3.8125rem;
+  --line-height-h2: 3.8125rem;
+  --font-size-h3: 2.9375rem;
+  --line-height-h3: 2.9375rem;
+  --font-size-h4: 2.25rem;
+  --line-height-h4: 2.25rem;
+  --font-size-h5: 1.6875rem;
+  --line-height-h5: 1.6875rem;
+  --font-size-h6: 1.3125rem;
+  --line-height-h6: 1.3125rem;
+
+  --font-size-b1: 1.875rem;
+  --line-height-b1: 2.0625rem;
+  --font-size-b2: 1.5625rem;
+  --line-height-b2: 1.75rem;
+  --font-size-b3: 1.25rem;
+  --line-height-b3: 1.5rem;
+  --font-size-b4: 1rem;
+  --line-height-b4: 1.25rem;
+  --font-size-b5: 0.8125rem;
+  --line-height-b5: 1rem;
+
+  /* --- COLOR PALETTE --- */
+  
+  /* NEUTRAL PALETTE */
+  --color-neutral-black-100: #000000;
+  --color-neutral-grey-100: #8383b4;
+  --color-neutral-black-50: #999999;
+  --color-neutral-black-30: #CCCCCC;
+  --color-neutral-black-10: #F6F6F6;
+  --color-neutral-white-100: #FFFFFF;
+
+  /* PRIMARY PALETTE (Berry) */
+  --color-primary-120: #450932;
+  --color-primary-100: #64184C;
+  --color-primary-80: #834670;
+  --color-primary-60: #B188A5;
+  --color-primary-20: #E0D1DB;
+  --color-primary-10: #F9F6F8;
+
+  /* SECONDARY PALETTE */
+  --color-secondary-teal-100: #00ABA7;
+  --color-secondary-teal-20: #CCEEED;
+  --color-secondary-teal-10: #E5F7F6;
+  
+  --color-secondary-magenta-100: #A42099;
+  --color-secondary-magenta-20: #E0D2EB;
+  --color-secondary-magenta-10: #F6FEF9;
+  
+  --color-secondary-orange-100: #F8B725;
+  --color-secondary-orange-20: #FEF1D3;
+  --color-secondary-orange-10: #FEF8E9;
+
+  /* SYSTEM PALETTE */
+  --color-system-link: #0000FF;
+  --color-system-link-visited: #4C1486;
+  --color-system-error: #D3332E;
+  --color-system-warning: #FF8800;
+  --color-system-success: #0D8300;
+  --color-system-info: #2765F6;
+}
+
+/* --------------------------------------------------
+  2. SHADCN/UI THEME VARIABLES
+  --------------------------------------------------
+  Maps the colors to HSL components (H S L) required by shadcn/ui.
+*/
+
+/* Default (Light) Theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* BACKGROUNDS & FOREGROUNDS (Based on Neutral Palette) */
+  --background: 0 0% 100%;       /* #FFFFFF */
+  --foreground: 0 0% 0%;         /* #000000 */
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 0%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 0%;
+  
+  --muted: 0 0% 96.5%;            /* #F6F6F6 (Black 10) */
+  --muted-foreground: 0 0% 60%;   /* #999999 (Black 50) */
+  --accent: 0 0% 96.5%;           /* #F6F6F6 (Black 10) */
+  --accent-foreground: 0 0% 0%;
+
+  /* PRIMARY (Berry 100: #64184C -> H:325 S:62% L:24%) */
+  --primary: 325 62% 24%;        
+  --primary-foreground: 0 0% 100%; /* White text */
+
+  /* SECONDARY (Teal 100: #00ABA7 -> H:179 S:100% L:34%) */
+  --secondary: 179 100% 34%;      
+  --secondary-foreground: 0 0% 100%;
+
+  /* BORDER & RING (Black 30 / Primary 100) */
+  --border: 0 0% 80%;            /* #CCCCCC */
+  --input: 0 0% 80%;             
+  --ring: 325 62% 24%;           /* Primary 100 */
+
+  /* DESTRUCTIVE (System Error: #D3332E -> H:2 S:61% L:51%) */
+  --destructive: 2 61% 51%;      
+  --destructive-foreground: 0 0% 100%;
+
+  /* RADIUS */
+  --radius: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Dark Theme */
+.dark {
+  /* BACKGROUNDS & FOREGROUNDS (Based on Neutral Black 100 / White 100) */
+  --background: 0 0% 0%;         /* #000000 */
+  --foreground: 0 0% 100%;       /* #FFFFFF */
+  --card: 0 0% 0%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 0%;
+  --popover-foreground: 0 0% 100%;
+  
+  --muted: 325 80% 14%;          /* #450932 (Primary 120) */
+  --muted-foreground: 325 29% 75%; /* #B188A5 (Primary 60) */
+  --accent: 325 80% 14%;
+  --accent-foreground: 0 0% 100%;
+
+  --primary: 325 29% 75%;        /* #B188A5 (Primary 60) */
+  --primary-foreground: 0 0% 0%;
+
+  --secondary: 179 40% 87%;      /* #CCEEED (Secondary Teal 20) */
+  --secondary-foreground: 0 0% 0%;
+
+  --border: 325 80% 14%;         /* Primary 120 */ 
+  --input: 325 80% 14%;
+  --ring: 325 29% 75%;           /* Primary 60 */
+  
+  --destructive: 2 61% 51%;      
+  --destructive-foreground: 0 0% 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* --------------------------------------------------
+  3. GLOBAL HTML BASE STYLES
+  --------------------------------------------------
+  (REMOVED: Use utility classes directly in your HTML/JSX instead)
+*/
