@@ -29,7 +29,7 @@ export default function Home() {
   return (
     <div className="min-h-dvh">
       <section className="container mx-auto">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 pt-10 ml-24">
+        <div className="grid grid-cols-1 gap-10 md:grid-cols-3 pt-10 ml-24"  >
           {services.map((service) => (
             <ServicesCard
               color={service.color}
