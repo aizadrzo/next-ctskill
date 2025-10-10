@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/marketing/hero-section";
 import { ServicesCard } from "@/components/marketing/services-card";
 import { MiniServiceCard } from "@/components/marketing/mini-services-card";
 import { CoreValues } from "@/components/marketing/core-values";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
   GraduationCap,
   Book,
@@ -44,35 +45,27 @@ const introServices = [
 // Core values data
 const coreValues = [
   {
-    icon: (
-      <Award className="w-10 h-10 sm:w-12 sm:h-12 text-neutral-black-100" />
-    ),
+    icon: <Heart className="w-12 h-12 text-primary-60" />,
     title: "Pride",
     description: "A commitment to quality and achieving meaningful results",
   },
   {
-    icon: (
-      <Users className="w-10 h-10 sm:w-12 sm:h-12 text-neutral-black-100" />
-    ),
+    icon: <Users className="w-12 h-12 text-primary-60" />,
     title: "Respect",
     description: "Listening, valuing, and supporting every individual",
   },
   {
-    icon: (
-      <Target className="w-10 h-10 sm:w-12 sm:h-12 text-neutral-black-100" />
-    ),
+    icon: <Target className="w-12 h-12 text-primary-60" />,
     title: "Accountability",
     description: "Taking ownership and delivering on promises",
   },
   {
-    icon: (
-      <Heart className="w-10 h-10 sm:w-12 sm:h-12 text-neutral-black-100" />
-    ),
+    icon: <Award className="w-12 h-12 text-primary-60" />,
     title: "Integrity",
     description: "Acting with honesty, transparency, and purpose",
   },
   {
-    icon: <Star className="w-10 h-10 sm:w-12 sm:h-12 text-neutral-black-100" />,
+    icon: <Star className="w-12 h-12 text-primary-60" />,
     title: "Service Excellence",
     description: "Striving to exceed expectations at every opportunity",
   },
@@ -145,49 +138,28 @@ export default function Home() {
 
       {/* Why CT Skills and Core Values Section */}
       <section className="relative bg-primary-10 py-16 sm:py-20 lg:py-24">
-        {/* Textured Semi Circle Background - Hidden on mobile for better performance */}
-        <div className="absolute top-[-29px] left-[33px] opacity-30 hidden lg:block">
-          <svg
-            width="19"
-            height="315"
-            viewBox="0 0 19 315"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g opacity="0.3">
-              <circle cx="9.18" cy="9.18" r="9.18" fill="#D9D9D9" />
-              <path
-                d="M17.64 15.65C13.5082 15.65 9.54515 13.9987 6.63466 11.0882C3.72416 8.17773 2.07287 4.21472 2.07287 0.0828857H0C0 4.76474 1.86142 9.25498 5.17942 12.573C8.49742 15.891 12.9877 17.7524 17.6695 17.7524V15.65H17.64Z"
-                fill="#E0D1DB"
-              />
-              <circle cx="9.18" cy="51.56" r="9.18" fill="#D9D9D9" />
-              <circle cx="9.18" cy="93.93" r="9.18" fill="#D9D9D9" />
-              <circle cx="9.18" cy="136.3" r="9.18" fill="#D9D9D9" />
-              <circle cx="9.18" cy="178.67" r="9.18" fill="#D9D9D9" />
-              <circle cx="9.18" cy="221.04" r="9.18" fill="#D9D9D9" />
-              <circle cx="9.18" cy="263.41" r="9.18" fill="#D9D9D9" />
-              <circle cx="9.18" cy="305.79" r="9.18" fill="#D9D9D9" />
-            </g>
-          </svg>
-        </div>
-
         <div className="container mx-auto px-6 sm:px-10 lg:px-[100px]">
           {/* Main Container */}
           <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-[184px]">
             {/* Left Side - Why CT Skills Card */}
-            <div className="w-full lg:w-[400px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg space-y-8 flex-shrink-0">
-              <div className="px-6 py-6 sm:px-8 sm:py-6 lg:px-8 lg:py-6 space-y-4">
-                <h4 className="text-h4 font-semibold text-primary-100">
-                  Why CT Skills?
-                </h4>
-                <p className="text-b4 text-neutral-black-100">
-                  Because we put people and progress first - we're your
-                  dedicated partner in growth.
-                </p>
-                <p className="text-b4 text-neutral-black-100">
-                  Our experienced team is passionate about delivering training
-                  and recruitment with impact — built around our core values.
-                </p>
+            <div className="w-full lg:w-[400px] h-fit bg-neutral-white-100 border border-neutral-black-30 rounded-lg flex-shrink-0">
+              <div className="p-8 space-y-8">
+                <div className="space-y-4">
+                  <h4 className="text-h4 font-semibold text-primary-100">
+                    Why CT Skills?
+                  </h4>
+                  <div className="space-y-4">
+                    <p className="text-b4 text-neutral-black-100">
+                      Because we put people and progress first - we're your
+                      dedicated partner in growth.
+                    </p>
+                    <p className="text-b4 text-neutral-black-100">
+                      Our experienced team is passionate about delivering
+                      training and recruitment with impact — built around our
+                      core values.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -264,7 +236,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 sm:gap-10 lg:gap-12">
             {/* Left Content - Text */}
             <div className="w-full lg:w-[502px] space-y-4 sm:space-y-6">
-              <h4 className="text-h5 sm:text-h4 font-semibold text-neutral-black-100">
+              <h4 className="text-h4 sm:text-h5 font-semibold text-neutral-black-100">
                 How can we <span className="text-primary-100">help you</span>{" "}
                 today?
               </h4>
@@ -327,63 +299,68 @@ export default function Home() {
       </section>
 
       {/* Triple CTA Form Section */}
-      <section className="relative bg-primary-10 py-16 sm:py-20 lg:pt-[80px] lg:pb-[100px]">
-        {/* Decorative Background - Hidden on mobile */}
-        <div className="absolute bottom-[273px] left-[1px] opacity-30 hidden lg:block pointer-events-none">
-          <svg
-            width="676"
-            height="671"
-            viewBox="0 0 676 671"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <g opacity="0.3">
-              <circle
-                cx="39.41"
-                cy="39.41"
-                r="39.41"
-                fill="#E0D1DB"
-                opacity="0.3"
-              />
-            </g>
-          </svg>
-        </div>
-
+      <section className="relative py-16 sm:py-20 lg:pt-[80px] lg:pb-[100px]">
         <div className="container mx-auto px-6 sm:px-10 lg:px-[100px]">
           <div className="flex flex-col items-center justify-center gap-10 sm:gap-12 relative z-10">
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-1 p-1 bg-neutral-white-100 border-2 border-neutral-black-30 rounded-lg">
-              <button className="px-6 py-2 bg-primary-100 text-neutral-white-100 text-b3 font-medium rounded-lg hover:bg-primary-120 transition-colors">
-                Get in touch
-              </button>
-              <button className="px-6 py-2 text-primary-100 text-b3 font-medium rounded-lg hover:bg-neutral-black-10 transition-colors">
-                Upload your CV
-              </button>
-              <button className="px-6 py-2 text-primary-100 text-b3 font-medium rounded-lg hover:bg-neutral-black-10 transition-colors">
-                Submit a vacancy
-              </button>
-            </div>
+            {/* CTA Tabs */}
+            <Tabs defaultValue="get-in-touch" className="w-full max-w-[773px]">
+              <TabsList className="w-full flex-col sm:flex-row gap-1 sm:gap-0">
+                <TabsTrigger
+                  value="get-in-touch"
+                  className="w-full sm:flex-1 text-center"
+                >
+                  Get in touch
+                </TabsTrigger>
+                <TabsTrigger
+                  value="upload-cv"
+                  className="w-full sm:flex-1 text-center"
+                >
+                  Upload your CV
+                </TabsTrigger>
+                <TabsTrigger
+                  value="submit-vacancy"
+                  className="w-full sm:flex-1 text-center"
+                >
+                  Submit a vacancy
+                </TabsTrigger>
+              </TabsList>
 
-            {/* Forms Container */}
-            <div className="flex flex-col gap-12 sm:gap-16 lg:gap-20">
-              {/* Forms Placeholder */}
-              <div className="w-full max-w-[1000px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 sm:p-10">
-                <div className="text-center space-y-6">
-                  <h5 className="text-h5 font-semibold text-neutral-black-100">
-                    Get in touch with us
-                  </h5>
+              <TabsContent value="get-in-touch" className="mt-8">
+                {/* Get in touch form content */}
+                <div className="w-full max-w-[1000px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 sm:p-10">
+                  <h3 className="text-h5 font-semibold text-neutral-black-100 mb-6">
+                    Get in Touch
+                  </h3>
                   <p className="text-b4 text-neutral-black-100">
-                    Use this form to send us a message, and we'll get back to
-                    you shortly.
+                    Contact form will go here...
                   </p>
-                  <div className="h-96 bg-neutral-black-10 rounded flex items-center justify-center">
-                    <p className="text-b4 text-neutral-black-50">
-                      Contact Form
-                    </p>
-                  </div>
                 </div>
-              </div>
-            </div>
+              </TabsContent>
+
+              <TabsContent value="upload-cv" className="mt-8">
+                {/* Upload CV form content */}
+                <div className="w-full max-w-[1000px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 sm:p-10">
+                  <h3 className="text-h5 font-semibold text-neutral-black-100 mb-6">
+                    Upload Your CV
+                  </h3>
+                  <p className="text-b4 text-neutral-black-100">
+                    CV upload form will go here...
+                  </p>
+                </div>
+              </TabsContent>
+
+              <TabsContent value="submit-vacancy" className="mt-8">
+                {/* Submit vacancy form content */}
+                <div className="w-full max-w-[1000px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 sm:p-10">
+                  <h3 className="text-h5 font-semibold text-neutral-black-100 mb-6">
+                    Submit a Vacancy
+                  </h3>
+                  <p className="text-b4 text-neutral-black-100">
+                    Vacancy submission form will go here...
+                  </p>
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
         </div>
       </section>

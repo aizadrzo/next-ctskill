@@ -1,6 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { GraduationCap, Book, UserSearch } from "lucide-react";
+import { MiniServiceCard } from "@/components/marketing/mini-services-card";
 
 /**
  * Features the main heading, description, and mini service cards.
@@ -58,41 +59,27 @@ export function HeroSection() {
 
           {/* Service Cards */}
           <div className="flex flex-col sm:flex-row gap-4">
-            {/* Apprenticeships Card */}
-            <div className="flex flex-col gap-2.5 p-4 bg-neutral-white-100 border border-neutral-black-30 rounded-lg w-full sm:w-[300px]">
-              <div className="flex items-center gap-4 h-9">
-                <div className="w-[78px] h-[78px] bg-secondary-teal-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <GraduationCap className="w-8 h-8 text-neutral-white-100" />
-                </div>
-                <h6 className="text-h6 font-semibold text-neutral-black-100 text-right flex-1">
-                  Apprenticeships
-                </h6>
-              </div>
-            </div>
-
-            {/* Online Courses Card */}
-            <div className="flex flex-col gap-2.5 p-4 bg-neutral-white-100 border border-neutral-black-30 rounded-lg w-full sm:w-[300px]">
-              <div className="flex items-center gap-4 h-9">
-                <div className="w-[78px] h-[78px] bg-secondary-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Book className="w-8 h-8 text-neutral-white-100" />
-                </div>
-                <h6 className="text-h6 font-semibold text-neutral-black-100 text-right flex-1">
-                  Online Courses
-                </h6>
-              </div>
-            </div>
-
-            {/* Recruitment Card */}
-            <div className="flex flex-col gap-2.5 p-4 bg-neutral-white-100 border border-neutral-black-30 rounded-lg w-full sm:w-[300px]">
-              <div className="flex items-center gap-4 h-9">
-                <div className="w-[78px] h-[78px] bg-secondary-magenta-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <UserSearch className="w-8 h-8 text-neutral-white-100" />
-                </div>
-                <h6 className="text-h6 font-semibold text-neutral-black-100 text-right flex-1">
-                  Recruitment
-                </h6>
-              </div>
-            </div>
+            <MiniServiceCard
+              icon={<GraduationCap className="w-8 h-8" />}
+              title="Apprenticeships"
+              iconColor="teal"
+              titleColor="black"
+              className="w-full sm:w-[300px]"
+            />
+            <MiniServiceCard
+              icon={<Book className="w-8 h-8" />}
+              title="Online Courses"
+              iconColor="orange"
+              titleColor="black"
+              className="w-full sm:w-[300px]"
+            />
+            <MiniServiceCard
+              icon={<UserSearch className="w-8 h-8" />}
+              title="Recruitment"
+              iconColor="magenta"
+              titleColor="black"
+              className="w-full sm:w-[300px]"
+            />
           </div>
         </div>
       </div>

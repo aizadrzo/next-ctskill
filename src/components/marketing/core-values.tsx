@@ -27,7 +27,7 @@ export function CoreValues({
       )}
     >
       {/* Icon and Title Container */}
-      <div className="flex items-end gap-[-20px]">
+      <div className="flex items-end gap-[-20px] w-full sm:w-[207px] flex-shrink-0">
         <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center flex-shrink-0">
           {icon}
         </div>
