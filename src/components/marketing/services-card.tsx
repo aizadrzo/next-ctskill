@@ -46,7 +46,7 @@ export function ServicesCard({
   color,
 }: ServiceCardProps) {
   return (
-    <Card className="relative mt-8 py-6 rounded-2xl border border-neutral-black-30 shadow-none">
+    <Card className="relative mt-8 py-6 rounded-2xl bg-neutral-white-100 border border-neutral-black-30 shadow-none w-full md:max-w-[355px]">
       {/* Icon container, positioned absolutely relative to the card */}
       <div className="absolute left-6 top-0 -translate-y-1/2">
         <div className={cn(iconContainerVariants({ color }))}>
