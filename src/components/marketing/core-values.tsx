@@ -1,0 +1,46 @@
+import * as React from "react";
+import { cn } from "@/lib/utils";
+
+export interface CoreValuesProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  className?: string;
+}
+
+/**
+ * A core values component that displays an icon, title, and description.
+ * The icon and title overlap with a negative gap, creating a compact visual.
+ * Uses globals.css color variables for consistent theming.
+ */
+export function CoreValues({
+  icon,
+  title,
+  description,
+  className,
+}: CoreValuesProps) {
+  return (
+    <div
+      className={cn(
+        "flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-8 lg:gap-16",
+        className
+      )}
+    >
+      {/* Icon and Title Container */}
+      <div className="flex items-end gap-[-20px]">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center flex-shrink-0">
+          {icon}
+        </div>
+        {/* Title */}
+        <h6 className="text-b3 sm:text-h6 font-semibold text-neutral-black-100">
+          {title}
+        </h6>
+      </div>
+
+      {/* Description */}
+      <div className="flex-1">
+        <p className="text-b4 text-neutral-black-100">{description}</p>
+      </div>
+    </div>
+  );
+}
