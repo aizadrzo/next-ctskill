@@ -32,14 +32,14 @@ export function CoreValues({
           {icon}
         </div>
         {/* Title */}
-        <h6 className="text-b3 sm:text-h6 font-semibold text-neutral-black-100">
+        <h6 className="text-lg font-semibold text-neutral-black-100">
           {title}
         </h6>
       </div>
 
       {/* Description */}
       <div className="flex-1">
-        <p className="text-b4 text-neutral-black-100">{description}</p>
+        <p className="text-base text-neutral-black-100">{description}</p>
       </div>
     </div>
   );

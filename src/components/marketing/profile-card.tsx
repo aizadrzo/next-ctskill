@@ -74,12 +74,12 @@ export function ProfileCard({
       <div className="flex flex-col items-center gap-4 w-full">
         {/* Name and Title */}
         <div className="flex flex-col items-center gap-1">
-          <h5 className="text-h5 font-semibold text-neutral-black-100 text-center">
+          <h5 className="text-xl font-semibold text-neutral-black-100 text-center">
             {firstName}
             <br />
             {lastName}
           </h5>
-          <p className="text-b4 text-neutral-grey-100 text-center">
+          <p className="text-base text-neutral-grey-100 text-center">
             {jobTitle}
           </p>
         </div>
@@ -89,13 +89,13 @@ export function ProfileCard({
           {/* Email */}
           <div className="flex items-center gap-4">
             <Mail className="w-5 h-6 text-primary-60" />
-            <span className="text-b4 text-neutral-grey-100">{email}</span>
+            <span className="text-base text-neutral-grey-100">{email}</span>
           </div>
 
           {/* Phone */}
           <div className="flex items-center gap-4">
             <Phone className="w-5 h-6 text-primary-60" />
-            <span className="text-b4 text-neutral-grey-100">{phone}</span>
+            <span className="text-base text-neutral-grey-100">{phone}</span>
           </div>
         </div>
       </div>

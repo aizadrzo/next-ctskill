@@ -93,7 +93,7 @@ export function MiniServiceCard({
           {/* Title */}
           <h6
             className={cn(
-              "text-h6 font-semibold",
+              "text-lg font-semibold",
               textVariants({ textColor: titleColor })
             )}
           >

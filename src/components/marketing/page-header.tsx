@@ -47,7 +47,7 @@ export function PageHeader({
           {breadcrumbs.length > 0 && (
             <div className="space-y-4">
               <Breadcrumb>
-                <BreadcrumbList className="text-b5 text-neutral-black-100">
+                <BreadcrumbList className="text-sm text-neutral-black-100">
                   {breadcrumbs.map((breadcrumb, index) => (
                     <React.Fragment key={index}>
                       <BreadcrumbItem>
@@ -76,7 +76,7 @@ export function PageHeader({
 
           {/* Title */}
           <div className="space-y-3 sm:space-y-6">
-            <h1 className="text-h3 sm:text-h2 font-semibold text-primary-100">
+            <h1 className="text-3xl md:text-4xl font-semibold text-primary-100">
               {title}
             </h1>
           </div>

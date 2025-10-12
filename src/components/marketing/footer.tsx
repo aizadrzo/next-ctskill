@@ -59,7 +59,7 @@ export function Footer() {
                 className="h-auto"
               />
             </Link>
-            <h1 className="text-h5 font-semibold text-right lg:text-right">
+            <h1 className="text-xl font-semibold text-right lg:text-right">
               Developing Careers
               <br />
               and Companies.
@@ -75,7 +75,7 @@ export function Footer() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className="text-b4 text-neutral-white-100 font-normal hover:text-primary-100 transition-colors duration-200"
+                    className="text-base text-neutral-white-100 font-normal hover:text-primary-100 transition-colors duration-200"
                   >
                     {link.name}
                   </Link>
@@ -103,7 +103,7 @@ export function Footer() {
                   {contactInfo.map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
                       <item.icon className="mt-1 size-5 shrink-0 text-neutral-white-100" />
-                      <span className="text-b4 text-neutral-white-100">
+                      <span className="text-base text-neutral-white-100">
                         {item.text}
                       </span>
                     </div>
@@ -116,7 +116,7 @@ export function Footer() {
             <div className="w-full lg:w-[349px] flex flex-col items-start lg:items-end gap-8">
               {/* Newsletter */}
               <div className="w-full">
-                <h3 className="text-h6 font-semibold text-neutral-white-100 mb-4">
+                <h3 className="text-lg font-semibold text-neutral-white-100 mb-4">
                   Subscribe to our newsletter
                 </h3>
                 <form className="flex items-center w-full">
@@ -137,7 +137,7 @@ export function Footer() {
 
               {/* Social Media */}
               <div className="w-full">
-                <h3 className="text-h6 font-semibold text-neutral-white-100 mb-4 text-left lg:text-right">
+                <h3 className="text-lg font-semibold text-neutral-white-100 mb-4 text-left lg:text-right">
                   Let's connect
                 </h3>
                 <div className="flex gap-2 lg:justify-end">
