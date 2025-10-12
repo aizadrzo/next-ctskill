@@ -57,10 +57,10 @@ export function ServicesCard({
 
       {/* Card content */}
       <CardHeader>
-        <CardTitle className="text-xl text-right">{title}</CardTitle>
+        <CardTitle className="text-lg text-right">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <CardDescription className="text-b4">{description}</CardDescription>
+        <CardDescription className="text-base">{description}</CardDescription>
       </CardContent>
     </Card>
   );

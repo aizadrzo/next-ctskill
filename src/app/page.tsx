@@ -93,12 +93,12 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-between items-end gap-12 sm:gap-16 lg:gap-20 mb-16 sm:mb-20 lg:mb-24 relative z-10">
             {/* Left Content - Text */}
             <div className="w-full lg:w-[608px] space-y-6 lg:space-y-[26px]">
-              <h3 className="text-h3 sm:text-h2 font-semibold text-neutral-black-100">
+              <h3 className="text-2xl sm:text-3xl font-semibold text-neutral-black-100">
                 Empowering <span className="text-primary-100">People</span>.
                 <br />
                 Supporting <span className="text-primary-100">Progress</span>.
               </h3>
-              <p className="text-b3 text-neutral-black-100">
+              <p className="text-(length:--font-size-b3) text-neutral-black-100">
                 We deliver high-quality, flexible solutions designed to meet the
                 demands of today's fast-changing world of work:
               </p>
@@ -145,15 +145,15 @@ export default function Home() {
             <div className="w-full lg:w-[400px] h-fit bg-neutral-white-100 border border-neutral-black-30 rounded-lg flex-shrink-0">
               <div className="p-8 space-y-8">
                 <div className="space-y-4">
-                  <h4 className="text-h4 font-semibold text-primary-100">
-                    Why CT Skills?
+                  <h4 className="text-2xl font-semibold text-neutral-black-100">
+                    Why <span className="text-primary-100">CT Skills?</span>
                   </h4>
                   <div className="space-y-4">
-                    <p className="text-b4 text-neutral-black-100">
+                    <p className="text-base text-neutral-black-100">
                       Because we put people and progress first - we're your
                       dedicated partner in growth.
                     </p>
-                    <p className="text-b4 text-neutral-black-100">
+                    <p className="text-base text-neutral-black-100">
                       Our experienced team is passionate about delivering
                       training and recruitment with impact — built around our
                       core values.
@@ -187,13 +187,13 @@ export default function Home() {
       <section className="bg-primary-10 pt-16 sm:pt-20 lg:pt-[100px]">
         <div className="container mx-auto px-6 sm:px-10">
           <div className="flex flex-col items-center gap-10 sm:gap-12">
-            <h6 className="text-b5 font-normal text-primary-60 uppercase tracking-wider">
+            <h6 className="text-sm font-normal text-primary-60 uppercase tracking-wider">
               ACCREDITATIONS & AWARDS
             </h6>
 
             {/* Awards Carousel Placeholder */}
             <div className="w-full h-10 bg-neutral-black-10 rounded flex items-center justify-center">
-              <p className="text-b4 text-neutral-black-50">Awards Carousel</p>
+              <p className="text-base text-neutral-black-50">Awards Carousel</p>
             </div>
           </div>
         </div>
@@ -205,10 +205,10 @@ export default function Home() {
           <div className="flex flex-col items-center gap-12 sm:gap-14">
             {/* Header */}
             <div className="flex flex-col items-center gap-4">
-              <h6 className="text-b5 font-normal text-primary-60 uppercase tracking-wider">
+              <h6 className="text-sm font-normal text-primary-60 uppercase tracking-wider">
                 TESTIMONIALS
               </h6>
-              <h6 className="text-h6 font-semibold text-primary-100 text-center">
+              <h6 className="text-lg font-semibold text-primary-100 text-center">
                 Listen to what people have to say about their experience with
                 us!
               </h6>
@@ -217,10 +217,10 @@ export default function Home() {
             {/* Testimonials Carousel Placeholder */}
             <div className="w-full max-w-[545px] h-[545px] bg-neutral-white-100 border border-primary-100 rounded-lg flex items-center justify-center">
               <div className="text-center space-y-4">
-                <p className="text-b4 text-neutral-black-100">
+                <p className="text-base text-neutral-black-100">
                   Testimonials Carousel
                 </p>
-                <p className="text-b5 text-neutral-black-50">
+                <p className="text-sm text-neutral-black-50">
                   Samantha Lin - Customer Service
                 </p>
               </div>
@@ -236,17 +236,17 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 sm:gap-10 lg:gap-12">
             {/* Left Content - Text */}
             <div className="w-full lg:w-[502px] space-y-4 sm:space-y-6">
-              <h4 className="text-h4 sm:text-h5 font-semibold text-neutral-black-100">
+              <h4 className="text-xl sm:text-2xl font-semibold text-neutral-black-100">
                 How can we <span className="text-primary-100">help you</span>{" "}
                 today?
               </h4>
               <div className="space-y-4 sm:space-y-6">
-                <p className="text-b4 text-neutral-black-100">
+                <p className="text-base text-neutral-black-100">
                   Learning doesn't stop with school — and neither does
                   opportunity. At CT Skills, we make development possible at
                   every age and every stage.
                 </p>
-                <p className="text-b4 text-neutral-black-100">
+                <p className="text-base text-neutral-black-100">
                   Whether you're preparing for your first job, changing
                   direction, upskilling your team or hiring new talent — we're
                   here to support you.
@@ -328,10 +328,10 @@ export default function Home() {
               <TabsContent value="get-in-touch" className="mt-8">
                 {/* Get in touch form content */}
                 <div className="w-full max-w-[1000px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 sm:p-10">
-                  <h3 className="text-h5 font-semibold text-neutral-black-100 mb-6">
+                  <h3 className="text-xl font-semibold text-neutral-black-100 mb-6">
                     Get in Touch
                   </h3>
-                  <p className="text-b4 text-neutral-black-100">
+                  <p className="text-base text-neutral-black-100">
                     Contact form will go here...
                   </p>
                 </div>
@@ -340,10 +340,10 @@ export default function Home() {
               <TabsContent value="upload-cv" className="mt-8">
                 {/* Upload CV form content */}
                 <div className="w-full max-w-[1000px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 sm:p-10">
-                  <h3 className="text-h5 font-semibold text-neutral-black-100 mb-6">
+                  <h3 className="text-xl font-semibold text-neutral-black-100 mb-6">
                     Upload Your CV
                   </h3>
-                  <p className="text-b4 text-neutral-black-100">
+                  <p className="text-base text-neutral-black-100">
                     CV upload form will go here...
                   </p>
                 </div>
@@ -352,10 +352,10 @@ export default function Home() {
               <TabsContent value="submit-vacancy" className="mt-8">
                 {/* Submit vacancy form content */}
                 <div className="w-full max-w-[1000px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 sm:p-10">
-                  <h3 className="text-h5 font-semibold text-neutral-black-100 mb-6">
+                  <h3 className="text-xl font-semibold text-neutral-black-100 mb-6">
                     Submit a Vacancy
                   </h3>
-                  <p className="text-b4 text-neutral-black-100">
+                  <p className="text-base text-neutral-black-100">
                     Vacancy submission form will go here...
                   </p>
                 </div>

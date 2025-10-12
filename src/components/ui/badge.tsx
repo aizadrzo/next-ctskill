@@ -13,8 +13,8 @@ const badgeVariants = cva(
         white: "bg-neutral-white-100 text-primary-100",
       },
       size: {
-        sm: "px-2 py-0.5 text-b5",
-        md: "px-2 py-0 text-b4 h-7",
+        sm: "px-2 py-0.5 text-sm",
+        md: "px-2 py-0 text-base h-7",
       },
     },
     defaultVariants: {
