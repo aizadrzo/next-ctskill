@@ -10,7 +10,7 @@ export interface CoreValuesProps {
 
 /**
  * A core values component that displays an icon, title, and description.
- * The icon and title overlap with a negative gap, creating a compact visual.
+ * Uses a clean horizontal layout with proper spacing and alignment.
  * Uses globals.css color variables for consistent theming.
  */
 export function CoreValues({
@@ -27,18 +27,15 @@ export function CoreValues({
       )}
     >
       {/* Icon and Title Container */}
-      <div className="flex items-end gap-[-20px] w-full sm:w-[207px] flex-shrink-0">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center flex-shrink-0">
-          {icon}
-        </div>
+      <div className="flex items-end gap-[-20px] w-full sm:w-[207px] flex-shrink-0 relative">
+        {icon}
         {/* Title */}
-        <h6 className="text-lg font-semibold text-neutral-black-100">
+        <h6 className="text-lg font-semibold text-neutral-black-100 ml-5 z-10 whitespace-nowrap">
           {title}
         </h6>
       </div>
-
       {/* Description */}
-      <div className="flex-1">
+      <div className="sm:w-full">
         <p className="text-base text-neutral-black-100">{description}</p>
       </div>
     </div>
