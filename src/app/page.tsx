@@ -45,29 +45,62 @@ const introServices = [
 // Core values data
 const coreValues = [
   {
-    icon: <Heart className="w-12 h-12 text-primary-60" />,
+    icon: (
+      <Heart className="w-15 h-15 sm:w-12 sm:h-12 text-primary-60 opacity-50" />
+    ),
     title: "Pride",
     description: "A commitment to quality and achieving meaningful results",
   },
   {
-    icon: <Users className="w-12 h-12 text-primary-60" />,
+    icon: (
+      <Users className="w-15 h-15 sm:w-12 sm:h-12 text-primary-60 opacity-50" />
+    ),
     title: "Respect",
     description: "Listening, valuing, and supporting every individual",
   },
   {
-    icon: <Target className="w-12 h-12 text-primary-60" />,
+    icon: (
+      <Target className="w-15 h-15 sm:w-12 sm:h-12 text-primary-60 opacity-50" />
+    ),
     title: "Accountability",
     description: "Taking ownership and delivering on promises",
   },
   {
-    icon: <Award className="w-12 h-12 text-primary-60" />,
+    icon: (
+      <Award className="w-15 h-15 sm:w-12 sm:h-12 text-primary-60 opacity-50" />
+    ),
     title: "Integrity",
     description: "Acting with honesty, transparency, and purpose",
   },
   {
-    icon: <Star className="w-12 h-12 text-primary-60" />,
+    icon: (
+      <Star className="w-15 h-15 sm:w-12 sm:h-12 text-primary-60 opacity-50" />
+    ),
     title: "Service Excellence",
     description: "Striving to exceed expectations at every opportunity",
+  },
+] as const;
+
+const featuresServices = [
+  {
+    icon: <GraduationCap className="w-8 h-8" />,
+    title: "Apprenticeships",
+    iconColor: "teal",
+  },
+  {
+    icon: <Book className="w-8 h-8" />,
+    title: "Online Courses",
+    iconColor: "orange",
+  },
+  {
+    icon: <UserSearch className="w-8 h-8" />,
+    title: "Recruitment",
+    iconColor: "magenta",
+  },
+  {
+    icon: <Briefcase className="w-8 h-8" />,
+    title: "Jobs",
+    iconColor: "magenta",
   },
 ] as const;
 
@@ -138,7 +171,7 @@ export default function Home() {
 
       {/* Why CT Skills and Core Values Section */}
       <section className="relative bg-primary-10 py-16 sm:py-20 lg:py-24">
-        <div className="container mx-auto px-6 sm:px-10 lg:px-[100px]">
+        <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] z-10">
           {/* Main Container */}
           <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-[184px]">
             {/* Left Side - Why CT Skills Card */}
@@ -146,7 +179,7 @@ export default function Home() {
               <div className="p-8 space-y-8">
                 <div className="space-y-4">
                   <h4 className="text-2xl font-semibold text-neutral-black-100">
-                    Why <span className="text-primary-100">CT Skills?</span>
+                    Why <span className="text-primary-100">CT Skills</span>?
                   </h4>
                   <div className="space-y-4">
                     <p className="text-base text-neutral-black-100">
@@ -258,40 +291,14 @@ export default function Home() {
             <div className="w-full lg:w-[633px] lg:h-[169px]">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 lg:h-full">
                 {/* Top Row */}
-                <div className="flex flex-col gap-4 sm:gap-5">
+                {featuresServices.map((service) => (
                   <MiniServiceCard
-                    icon={<GraduationCap className="w-8 h-8" />}
-                    title="Apprenticeships"
-                    iconColor="teal"
-                    cardState="default"
+                    icon={service.icon}
+                    title={service.title}
+                    iconColor={service.iconColor}
                     titleColor="black"
                   />
-                  <MiniServiceCard
-                    icon={<UserSearch className="w-8 h-8" />}
-                    title="Recruitment"
-                    iconColor="magenta"
-                    cardState="default"
-                    titleColor="black"
-                  />
-                </div>
-
-                {/* Bottom Row */}
-                <div className="flex flex-col gap-4 sm:gap-5">
-                  <MiniServiceCard
-                    icon={<Book className="w-8 h-8" />}
-                    title="Online Courses"
-                    iconColor="orange"
-                    cardState="default"
-                    titleColor="black"
-                  />
-                  <MiniServiceCard
-                    icon={<Briefcase className="w-8 h-8" />}
-                    title="Jobs"
-                    iconColor="magenta"
-                    cardState="default"
-                    titleColor="black"
-                  />
-                </div>
+                ))}
               </div>
             </div>
           </div>

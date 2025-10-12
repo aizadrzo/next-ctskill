@@ -22,21 +22,15 @@ export function CoreValues({
   return (
     <div
       className={cn(
-        "flex flex-col sm:flex-row sm:items-end gap-4 sm:gap-8 lg:gap-16",
+        "flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-8 lg:gap-16 relative",
         className
       )}
     >
-      {/* Icon and Title Container */}
-      <div className="flex items-end gap-[-20px] w-full sm:w-[207px] flex-shrink-0">
-        <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center flex-shrink-0">
-          {icon}
-        </div>
-        {/* Title */}
-        <h6 className="text-lg font-semibold text-neutral-black-100">
-          {title}
-        </h6>
-      </div>
-
+      <div className="z-0 absolute bottom-auto left-0 sm:bottom-0">{icon}</div>
+      {/* Title */}
+      <h6 className="text-lg font-semibold text-neutral-black-100 z-10 ml-6">
+        {title}
+      </h6>
       {/* Description */}
       <div className="flex-1">
         <p className="text-base text-neutral-black-100">{description}</p>
