@@ -1,0 +1,280 @@
+import Image from "next/image";
+import { PageHeader } from "@/components/marketing/page-header";
+import { ContentBoxLink } from "@/components/marketing/content-box-link";
+import {
+  GraduationCap,
+  Briefcase,
+  TrendingUp,
+  Search,
+  MessageCircle,
+  Users,
+  Building,
+  ChevronRight,
+} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+const careerHubItems = [
+  {
+    title: "Starting Your Apprenticeship Journey",
+    icon: <GraduationCap className="w-8 h-8" />,
+    iconColor: "teal" as const,
+  },
+  {
+    title: "Career Toolkit",
+    icon: <Briefcase className="w-8 h-8" />,
+    iconColor: "orange" as const,
+  },
+  {
+    title: "Career Progression Routes",
+    icon: <TrendingUp className="w-8 h-8" />,
+    iconColor: "magenta" as const,
+  },
+  {
+    title: "Job Searching",
+    icon: <Search className="w-8 h-8" />,
+    iconColor: "orange" as const,
+  },
+  {
+    title: "Careers Advice",
+    icon: <MessageCircle className="w-8 h-8" />,
+    iconColor: "magenta" as const,
+  },
+  {
+    title: "Resource for Parents and Carers",
+    icon: <Users className="w-8 h-8" />,
+    iconColor: "teal" as const,
+  },
+  {
+    title: "Employer Resources",
+    icon: <Building className="w-8 h-8" />,
+    iconColor: "magenta" as const,
+  },
+] as const;
+
+const breadcrumbs = [
+  { label: "Home", href: "/" },
+  { label: "About Us", href: "/about" },
+  { label: "Careers Hub" },
+];
+
+export default function CareersHubPage() {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <PageHeader title="Careers Hub" breadcrumbs={breadcrumbs} />
+
+      {/* TextImageRow Section */}
+      <section className="relative overflow-hidden">
+        {/* Skewed Background Element */}
+        <div className="absolute inset-0 w-full h-full transform skew-y-[6deg] origin-top-right z-0"></div>
+
+        <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10">
+          <div className="py-20 sm:py-24 lg:py-[120px]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Content */}
+              <div className="space-y-6">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-black-100">
+                  Find Your Path,{" "}
+                  <span className="text-primary-100">Shape Your Future</span>
+                </h2>
+                <p className="text-base text-neutral-black-100 leading-relaxed">
+                  Welcome to CT Careers Hub – the place to kick-start your
+                  journey and make your career goals happen. Whether you're just
+                  getting started or figuring out what’s next, the CT Skills
+                  Information, Advice and Guidance portal is here to help. From
+                  exploring your options to planning your next steps, we’ve got
+                  the tools, tips and support to help you unlock your potential
+                  and take control of your future – your way.
+                </p>
+              </div>
+
+              {/* Video */}
+              <div className="relative">
+                <div className="aspect-[4/3] relative rounded-lg overflow-hidden bg-gradient-to-b from-transparent to-black">
+                  <Image
+                    src="/images/video-placeholder.png"
+                    alt="CT Skills Video"
+                    fill
+                    className="object-cover"
+                  />
+                  {/* Play Button Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-[74px] h-[74px] bg-neutral-white-100 rounded-full flex items-center justify-center shadow-lg"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What can we help you with Section */}
+      <section className="relative overflow-hidden">
+        {/* Skewed Background Element */}
+        <div className="absolute inset-0 w-full h-full bg-primary-10 transform skew-y-[3deg] origin-top-left z-0"></div>
+
+        <div className="py-16 sm:py-20 lg:py-24 relative z-10">
+          <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] pt-6 lg:pt-24">
+            {/* Main Container */}
+            <div className="flex flex-col">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-black-100 pb-8">
+                What can we help you with?
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {careerHubItems.map((item) => (
+                  <ContentBoxLink
+                    key={item.title}
+                    title={item.title}
+                    icon={item.icon}
+                    iconColor={item.iconColor}
+                    href="#"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* MeetCareerAdvisor Section */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <Card className="bg-primary-20 border-none rounded-lg py-8 px-4 h-full relative">
+              <div className="absolute top-0 left-0 z-0 inline-block w-0 h-0 border-solid rounded-lg border-t-[400px] border-r-[400px] border-l-0 border-b-0 border-l-transparent border-r-transparent border-t-primary-60 border-b-transparent"></div>
+              <CardHeader className="z-10">
+                <div className="flex flex-col lg:flex-row items-center gap-8">
+                  <div className="w-full lg:w-[60%] h-full rounded-lg overflow-hidden flex-shrink-0 bg-primary-100">
+                    <Image
+                      src="/images/career-advisor.png"
+                      alt="Career Advisor"
+                      width={328}
+                      height={308}
+                      className="w-full h-full object-fit"
+                    />
+                  </div>
+                  <CardTitle className="text-2xl lg:text-3xl text-neutral-black-100 flex-1 text-left">
+                    Meet Your Careers Advisor
+                  </CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent className="mt-auto">
+                <p className="text-lg text-neutral-black-100">
+                  Whether you're unsure where to start or ready to take the next
+                  step, our Careers Advisor, Emma, is here to help. With expert
+                  guidance, personalised support, and a deep understanding of
+                  current opportunities, she'll provide the advice you need to
+                  move forward with confidence.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Contact Form */}
+            <div className="bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8">
+              <div className="space-y-6">
+                <div className="border-b border-primary-120 pb-4">
+                  <h3 className="text-xl font-semibold text-primary-100">
+                    Get in touch with us
+                  </h3>
+                </div>
+
+                <form className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-neutral-black-50">
+                        FIRST NAME*
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-neutral-black-50">
+                        LAST NAME*
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-neutral-black-50">
+                        EMAIL*
+                      </label>
+                      <input
+                        type="email"
+                        className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-neutral-black-50">
+                        TELEPHONE NUMBER*
+                      </label>
+                      <input
+                        type="tel"
+                        className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-neutral-black-50">
+                        COMPANY
+                      </label>
+                      <input
+                        type="text"
+                        className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <label className="text-sm font-medium text-neutral-black-50">
+                        HOW CAN WE HELP?
+                      </label>
+                      <select className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100">
+                        <option>Select an option</option>
+                        <option>Apprenticeships</option>
+                        <option>Online Courses</option>
+                        <option>Recruitment</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-neutral-black-50">
+                      MESSAGE*
+                    </label>
+                    <textarea
+                      rows={4}
+                      className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
+                    />
+                  </div>
+
+                  <div className="flex items-center gap-6">
+                    <div className="flex items-center gap-2">
+                      <input type="checkbox" id="privacy" />
+                      <label
+                        htmlFor="privacy"
+                        className="text-sm text-neutral-black-100"
+                      >
+                        By submitting I agree to the privacy policy.*
+                      </label>
+                    </div>
+                    <button className="inline-flex items-center justify-center px-6 py-2 bg-primary-100 text-neutral-white-100 font-semibold rounded-lg hover:bg-primary-120 transition-colors">
+                      Submit
+                      <ChevronRight className="w-4 h-4 ml-2" />
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
