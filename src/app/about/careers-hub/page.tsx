@@ -111,8 +111,15 @@ export default function CareersHubPage() {
       {/* What can we help you with Section */}
       <section className="relative overflow-hidden">
         {/* Skewed Background Element */}
-        <div className="absolute inset-0 w-full h-full bg-primary-10 transform skew-y-[3deg] origin-top-left z-0"></div>
-
+        <div className="absolute inset-0 w-full h-full bg-neutral-black-10 transform skew-y-[3deg] origin-top-left z-0"></div>
+        <div className="absolute bottom-0 right-0 z-1">
+          <Image
+            src="/decorations/dots.svg"
+            alt="Dots"
+            width={498}
+            height={316}
+          />
+        </div>
         <div className="py-16 sm:py-20 lg:py-24 relative z-10">
           <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] pt-6 lg:pt-24">
             {/* Main Container */}
@@ -138,19 +145,27 @@ export default function CareersHubPage() {
 
       {/* MeetCareerAdvisor Section */}
       <section className="py-20 bg-white relative overflow-hidden">
+        <div className="absolute top-0 left-0 z-1">
+          <Image
+            src="/decorations/confetti-2.svg"
+            alt="Confetti"
+            width={598}
+            height={613}
+          />
+        </div>
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <Card className="bg-primary-20 border-none rounded-lg py-8 px-4 h-full relative">
-              <div className="absolute top-0 left-0 z-0 inline-block w-0 h-0 border-solid rounded-lg border-t-[400px] border-r-[400px] border-l-0 border-b-0 border-l-transparent border-r-transparent border-t-primary-60 border-b-transparent"></div>
+              <div className="absolute top-0 left-0 z-0 inline-block w-0 h-0 border-solid rounded-tl-lg border-t-[400px] border-r-[400px] border-l-0 border-b-0 border-l-transparent border-r-transparent border-t-primary-60 border-b-transparent"></div>
               <CardHeader className="z-10">
                 <div className="flex flex-col lg:flex-row items-center gap-8">
-                  <div className="w-full lg:w-[60%] h-full rounded-lg overflow-hidden flex-shrink-0 bg-primary-100">
+                  <div className="w-full lg:w-[60%] h-[308px] rounded-lg overflow-hidden flex-shrink-0 bg-primary-100">
                     <Image
                       src="/images/career-advisor.png"
                       alt="Career Advisor"
                       width={328}
                       height={308}
-                      className="w-full h-full object-fit"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <CardTitle className="text-2xl lg:text-3xl text-neutral-black-100 flex-1 text-left">

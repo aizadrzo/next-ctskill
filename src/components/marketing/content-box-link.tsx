@@ -77,7 +77,7 @@ export function ContentBoxLink({
 
       {/* Content */}
       <div className="flex items-center justify-between flex-1 min-w-0">
-        <h3 className="text-h6 text-neutral-black-100 font-semibold group-hover:text-primary-100 transition-colors">
+        <h3 className="text-lg text-neutral-black-100 font-semibold group-hover:text-primary-100 transition-colors">
           {title}
         </h3>
 
