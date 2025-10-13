@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="598" height="613" fill="none">
+    <mask id="a" width="16" height="16" x="320" y="252" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="327.552" cy="259.677" r="7.5" fill="#D9D9D9" transform="rotate(75 327.552 259.677)" />
+    </mask>
+    <g mask="url(#a)">
+        <path fill="#A42099" d="m332.855 250.491 3.882 14.489-11.772 3.154-3.883-14.489z" />
+    </g>
+    <mask id="b" width="16" height="16" x="196" y="310" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="204.491" cy="317.738" r="7.5" fill="#D9D9D9" transform="rotate(-120 204.491 317.738)" />
+    </mask>
+    <g mask="url(#b)">
+        <path fill="#A42099" d="m201.746 327.983-7.5-12.99 10.555-6.094 7.5 12.99z" />
+    </g>
+    <mask id="c" width="16" height="16" x="300" y="533" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="308.491" cy="540.736" r="7.5" fill="#D9D9D9" transform="rotate(-30 308.491 540.736)" />
+    </mask>
+    <g mask="url(#c)">
+        <path fill="#A42099" d="m298.246 537.991 12.99-7.5 6.094 10.555-12.99 7.5z" />
+    </g>
+    <mask id="d" width="16" height="16" x="523" y="31" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="531.128" cy="39.096" r="7.5" fill="#D9D9D9" transform="rotate(135 531.128 39.096)" />
+    </mask>
+    <g mask="url(#d)">
+        <path fill="#A42099" d="m541.734 39.097-10.606 10.606-8.619-8.618 10.607-10.607z" />
+    </g>
+    <mask id="e" width="16" height="16" x="578" y="187" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="585.549" cy="194.676" r="7.5" fill="#D9D9D9" transform="rotate(-75 585.549 194.676)" />
+    </mask>
+    <g mask="url(#e)">
+        <path fill="#A42099" d="m576.363 199.979 3.882-14.489 11.773 3.155-3.882 14.488z" />
+    </g>
+    <mask id="f" width="16" height="16" x="401" y="597" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="409.489" cy="604.736" r="7.5" fill="#D9D9D9" transform="rotate(120 409.489 604.736)" />
+    </mask>
+    <g mask="url(#f)">
+        <path fill="#A42099" d="m419.734 601.991-7.5 12.99-10.555-6.094 7.5-12.99z" />
+    </g>
+    <mask id="g" width="16" height="16" x="504" y="329" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="511.549" cy="336.677" r="7.5" fill="#D9D9D9" transform="rotate(15 511.549 336.677)" />
+    </mask>
+    <g mask="url(#g)">
+        <path fill="#A42099" d="m506.246 327.491 14.489 3.882-3.155 11.773-14.488-3.882z" />
+    </g>
+    <mask id="h" width="16" height="16" x="149" y="89" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="157.234" cy="96.991" r="7.5" fill="#D9D9D9" transform="rotate(180 157.234 96.991)" />
+    </mask>
+    <g mask="url(#h)">
+        <path fill="#A42099" d="M164.734 104.491h-15V92.303h15z" />
+    </g>
+    <mask id="i" width="16" height="16" x="504" y="441" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="511.552" cy="448.677" r="7.5" fill="#D9D9D9" transform="rotate(75 511.552 448.677)" />
+    </mask>
+    <g mask="url(#i)">
+        <path fill="#F8B725" d="m516.855 439.491 3.882 14.489-11.772 3.154-3.883-14.489z" />
+    </g>
+    <mask id="j" width="16" height="16" x="26" y="267" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="33.733" cy="274.609" r="7.5" fill="#D9D9D9" transform="rotate(-120 33.733 274.609)" />
+    </mask>
+    <g mask="url(#j)">
+        <path fill="#F8B725" d="m30.988 284.854-7.5-12.99 10.556-6.094 7.5 12.99z" />
+    </g>
+    <mask id="k" width="16" height="16" x="35" y="385" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="43.491" cy="392.736" r="7.5" fill="#D9D9D9" transform="rotate(-30 43.491 392.736)" />
+    </mask>
+    <g mask="url(#k)">
+        <path fill="#F8B725" d="m33.246 389.991 12.99-7.5 6.094 10.555-12.99 7.5z" />
+    </g>
+    <mask id="l" width="16" height="16" x="236" y="20" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="244.128" cy="28.096" r="7.5" fill="#D9D9D9" transform="rotate(135 244.128 28.096)" />
+    </mask>
+    <g mask="url(#l)">
+        <path fill="#F8B725" d="m254.734 28.097-10.606 10.606-8.619-8.618 10.607-10.607z" />
+    </g>
+    <mask id="m" width="16" height="16" x="391" y="175" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="398.549" cy="182.676" r="7.5" fill="#D9D9D9" transform="rotate(-75 398.549 182.676)" />
+    </mask>
+    <g mask="url(#m)">
+        <path fill="#F8B725" d="m389.363 187.979 3.882-14.489 11.773 3.155-3.882 14.488z" />
+    </g>
+    <mask id="n" width="16" height="16" x="208" y="460" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="216.489" cy="467.736" r="7.5" fill="#D9D9D9" transform="rotate(120 216.489 467.736)" />
+    </mask>
+    <g mask="url(#n)">
+        <path fill="#F8B725" d="m226.734 464.991-7.5 12.99-10.555-6.094 7.5-12.99z" />
+    </g>
+    <mask id="o" width="16" height="16" x="405" y="329" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="412.549" cy="336.677" r="7.5" fill="#D9D9D9" transform="rotate(15 412.549 336.677)" />
+    </mask>
+    <g mask="url(#o)">
+        <path fill="#F8B725" d="m407.246 327.491 14.489 3.882-3.155 11.773-14.488-3.882z" />
+    </g>
+    <mask id="p" width="16" height="16" x="123" y="219" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="131.234" cy="226.991" r="7.5" fill="#D9D9D9" transform="rotate(180 131.234 226.991)" />
+    </mask>
+    <g mask="url(#p)">
+        <path fill="#F8B725" d="M138.734 234.491h-15v-12.188h15z" />
+    </g>
+    <mask id="q" width="16" height="16" x="274" y="391" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="281.552" cy="398.676" r="7.5" fill="#D9D9D9" transform="rotate(-165 281.552 398.676)" />
+    </mask>
+    <g mask="url(#q)">
+        <path fill="#00ABA7" d="m286.855 407.862-14.489-3.882 3.155-11.773 14.488 3.882z" />
+    </g>
+    <mask id="r" width="16" height="16" x="374" y="49" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="382.234" cy="56.991" r="7.5" fill="#D9D9D9" />
+    </mask>
+    <g mask="url(#r)">
+        <path fill="#00ABA7" d="M374.734 49.491h15v12.188h-15z" />
+    </g>
+    <mask id="s" width="16" height="16" x="273" y="158" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="281.234" cy="165.991" r="7.5" fill="#D9D9D9" transform="rotate(90 281.234 165.991)" />
+    </mask>
+    <g mask="url(#s)">
+        <path fill="#00ABA7" d="M288.734 158.491v15h-12.188v-15z" />
+    </g>
+    <mask id="t" width="16" height="16" x="399" y="451" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="407.491" cy="459.462" r="7.5" fill="#D9D9D9" transform="rotate(-105 407.491 459.462)" />
+    </mask>
+    <g mask="url(#t)">
+        <path fill="#00ABA7" d="m402.188 468.647-3.882-14.489 11.772-3.154 3.883 14.489z" />
+    </g>
+    <mask id="u" width="16" height="16" x="225" y="558" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="233.129" cy="566.098" r="7.5" fill="#D9D9D9" transform="rotate(45 233.129 566.098)" />
+    </mask>
+    <g mask="url(#u)">
+        <path fill="#00ABA7" d="m233.129 555.491 10.607 10.607-8.619 8.618-10.606-10.607z" />
+    </g>
+    <mask id="v" width="16" height="16" x="5" y="154" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="13.491" cy="161.738" r="7.5" fill="#D9D9D9" transform="rotate(-120 13.491 161.738)" />
+    </mask>
+    <g mask="url(#v)">
+        <path fill="#00ABA7" d="m10.746 171.983-7.5-12.99 10.555-6.094 7.5 12.99z" />
+    </g>
+    <mask id="w" width="16" height="16" x="120" y="432" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="128.128" cy="440.096" r="7.5" fill="#D9D9D9" transform="rotate(135 128.128 440.096)" />
+    </mask>
+    <g mask="url(#w)">
+        <path fill="#00ABA7" d="m138.734 440.096-10.607 10.607-8.618-8.619 10.607-10.606z" />
+    </g>
+    <mask id="x" width="16" height="16" x="479" y="210" maskUnits="userSpaceOnUse" style="mask-type:alpha">
+        <circle cx="487.491" cy="217.738" r="7.5" fill="#D9D9D9" transform="rotate(-60 487.491 217.738)" />
+    </mask>
+    <g mask="url(#x)">
+        <path fill="#00ABA7" d="m477.246 220.483 7.5-12.99 10.555 6.094-7.5 12.99z" />
+    </g>
+</svg>
