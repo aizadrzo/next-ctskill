@@ -49,7 +49,6 @@ export function ProfileCard({
   email,
   phone,
   variant = "default",
-  showCornerDecoration = false,
   className,
 }: ProfileCardProps) {
   return (
@@ -71,46 +70,32 @@ export function ProfileCard({
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col items-center gap-4 w-full">
+      <div className="flex flex-col items-start gap-4 w-full">
         {/* Name and Title */}
-        <div className="flex flex-col items-center gap-1">
-          <h5 className="text-xl font-semibold text-neutral-black-100 text-center">
+        <div className="flex flex-col gap-1">
+          <h5 className="text-xl font-semibold text-neutral-black-100">
             {firstName}
             <br />
             {lastName}
           </h5>
-          <p className="text-base text-neutral-grey-100 text-center">
-            {jobTitle}
-          </p>
+          <p className="text-base text-neutral-black-50">{jobTitle}</p>
         </div>
 
         {/* Contact Information */}
-        <div className="flex flex-col items-center gap-2 w-full">
+        <div className="flex flex-col items-start gap-2 w-full">
           {/* Email */}
           <div className="flex items-center gap-4">
             <Mail className="w-5 h-6 text-primary-60" />
-            <span className="text-base text-neutral-grey-100">{email}</span>
+            <span className="text-base text-neutral-black-50">{email}</span>
           </div>
 
           {/* Phone */}
           <div className="flex items-center gap-4">
             <Phone className="w-5 h-6 text-primary-60" />
-            <span className="text-base text-neutral-grey-100">{phone}</span>
+            <span className="text-base text-neutral-black-50">{phone}</span>
           </div>
         </div>
       </div>
-
-      {/* Corner Decoration (Optional) */}
-      {showCornerDecoration && (
-        <div className="absolute bottom-0 right-0 w-[102px] h-[112px]">
-          <Image
-            src="/images/corner-decoration.svg"
-            alt="Corner Decoration"
-            fill
-            className="object-cover"
-          />
-        </div>
-      )}
     </div>
   );
 }
