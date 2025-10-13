@@ -10,7 +10,8 @@ import {
   IntegrityIcon,
   ServiceExcellenceIcon,
 } from "../../../public/core-values-icons";
-import { ChevronRight, Play } from "lucide-react";
+import { ChevronDownIcon, ChevronRight, Play } from "lucide-react";
+import Link from "next/link";
 import {
   Collapsible,
   CollapsibleContent,
@@ -24,6 +25,12 @@ import {
   CarouselPrevious,
   CarouselNext,
 } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+import {
+  CheckmarkIcon,
+  HandshakeIcon,
+  FlagIcon,
+} from "../../../public/about-icons";
 
 const breadcrumbs = [{ label: "Home", href: "/" }, { label: "About" }];
 
@@ -68,7 +75,7 @@ const coreValues = [
 const teamMembers = [
   {
     image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram",
+    imageAlt: "Nicola Aram1",
     firstName: "Nicola",
     lastName: "Aram",
     jobTitle: "Marketing Manager",
@@ -77,7 +84,7 @@ const teamMembers = [
   },
   {
     image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram",
+    imageAlt: "Nicola Aram2",
     firstName: "Nicola",
     lastName: "Aram",
     jobTitle: "Marketing Manager",
@@ -86,7 +93,7 @@ const teamMembers = [
   },
   {
     image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram",
+    imageAlt: "Nicola Aram3",
     firstName: "Nicola",
     lastName: "Aram",
     jobTitle: "Marketing Manager",
@@ -95,7 +102,7 @@ const teamMembers = [
   },
   {
     image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram",
+    imageAlt: "Nicola Aram4",
     firstName: "Nicola",
     lastName: "Aram",
     jobTitle: "Marketing Manager",
@@ -104,7 +111,7 @@ const teamMembers = [
   },
   {
     image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram",
+    imageAlt: "Nicola Aram5",
     firstName: "Nicola",
     lastName: "Aram",
     jobTitle: "Marketing Manager",
@@ -113,7 +120,7 @@ const teamMembers = [
   },
   {
     image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram",
+    imageAlt: "Nicola Aram6",
     firstName: "Nicola",
     lastName: "Aram",
     jobTitle: "Marketing Manager",
@@ -122,7 +129,7 @@ const teamMembers = [
   },
   {
     image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram",
+    imageAlt: "Nicola Aram7",
     firstName: "Nicola",
     lastName: "Aram",
     jobTitle: "Marketing Manager",
@@ -131,7 +138,7 @@ const teamMembers = [
   },
   {
     image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram",
+    imageAlt: "Nicola Aram8",
     firstName: "Nicola",
     lastName: "Aram",
     jobTitle: "Marketing Manager",
@@ -142,16 +149,19 @@ const teamMembers = [
 
 const whyChooseUsItems = [
   {
+    icon: <FlagIcon className="w-10 h-10 text-neutral-white-100" />,
     title: "Proven Success",
     description:
       "With over 20 years of experience, we have a proven track record of success in developing careers and companies.",
   },
   {
+    icon: <CheckmarkIcon className="w-10 h-10 text-neutral-white-100" />,
     title: "Expert Team",
     description:
       "Our experienced team is passionate about delivering training and recruitment with impact.",
   },
   {
+    icon: <HandshakeIcon className="w-10 h-10 text-neutral-white-100" />,
     title: "Engaging Learning Environment",
     description:
       "We create engaging learning environments that help individuals reach their full potential.",
@@ -233,25 +243,27 @@ export default function AboutPage() {
       <section className="relative overflow-hidden">
         <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10">
           <div className="py-20 sm:py-24 lg:py-[120px]">
-            <div className="bg-primary-100 rounded-lg p-8 lg:p-16">
+            <div className="bg-primary-100 rounded-lg p-8 lg:py-10 lg:px-[64px]">
               <div className="text-center space-y-12">
                 <h2 className="text-xl sm:text-2xl font-semibold text-neutral-white-100">
                   Why choose us?
                 </h2>
 
-                <div className="grid grid-cols-1 sm:grid-cols-3 align-middle justify-between">
+                <div className="grid grid-cols-1 sm:grid-cols-3 align-middle justify-between gap-8 md:gap-16">
                   {whyChooseUsItems.map((item, index) => (
                     <Collapsible key={index} className="w-full">
-                      <CollapsibleTrigger className="flex flex-col items-start justify-between">
+                      <CollapsibleTrigger className="flex flex-col items-start justify-between w-full cursor-pointer group">
+                        <div className="pb-4 sm:pb-6">{item.icon}</div>
                         <h3 className="sm:text-lg font-semibold text-neutral-white-100 pb-4">
                           {item.title}
                         </h3>
                         <Separator className="w-full bg-neutral-100" />
                         <CollapsibleContent>
-                          <p className="text-base text-neutral-white-100 text-left">
+                          <p className="text-base text-neutral-white-100 text-left pt-4">
                             {item.description}
                           </p>
                         </CollapsibleContent>
+                        <ChevronDownIcon className="ml-auto w-6 h-6 text-neutral-white-100 mt-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
                       </CollapsibleTrigger>
                     </Collapsible>
                   ))}
@@ -262,16 +274,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why CT Skills and Core Values Section */}
+      {/* Core Values Section */}
       <section className="relative overflow-hidden">
-        <div className="py-16 sm:py-20 lg:py-24 bg-primary-10">
-          <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] z-10">
+        {/* Skewed Background Element */}
+        <div className="absolute inset-0 w-full h-full bg-primary-10 transform skew-y-[3deg] origin-top-left z-0"></div>
+
+        <div className="py-16 sm:py-20 lg:py-24 relative z-10">
+          <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] pt-6 lg:pt-24">
             {/* Main Container */}
             <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-[184px]">
               <div className="w-full lg:w-[400px] h-fit bg-neutral-white-100 border border-neutral-black-30 rounded-lg flex-shrink-0">
                 <div className="p-8 space-y-8">
                   <div className="space-y-4">
-                    <h4 className="text-2xl font-semibold text-neutral-black-100">
+                    <h4 className="text-lg sm:text-xl font-semibold text-neutral-black-100">
                       Our <span className="text-primary-100">Values</span>
                     </h4>
                     <div className="space-y-4">
@@ -314,7 +329,7 @@ export default function AboutPage() {
       {/* Awards Carousel Section */}
       <section className="relative overflow-hidden">
         {/* Skewed Background Element */}
-        <div className="absolute inset-0 w-full h-full bg-primary-10 transform skew-y-[6deg] origin-top-right z-0"></div>
+        <div className="absolute inset-0 w-full h-full bg-primary-10 transform skew-y-[3deg] origin-top-right z-0"></div>
         <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10">
           <div className="py-20 sm:py-24 lg:py-[120px]">
             <div className="text-center space-y-12">
@@ -323,7 +338,7 @@ export default function AboutPage() {
               </h2>
 
               {/* Awards Logos */}
-              <div className="flex items-center justify-center gap-12 lg:gap-24">
+              <div className="flex items-center justify-center gap-12 lg:gap-24 pb-16">
                 <div className="w-40 h-10 bg-neutral-black-30 rounded flex items-center justify-center">
                   <span className="text-sm text-neutral-black-50">
                     Award Logo 1
@@ -358,13 +373,17 @@ export default function AboutPage() {
               {/* Section Header */}
               <div className="text-center space-y-6">
                 <div className="flex items-center justify-between gap-4">
-                  <h2 className="text-xl sm:text-2xl font-semibold text-neutral-black-100">
+                  <h2 className="text-xl sm:text-2xl font-semibold text-neutral-black-100 text-left">
                     Meet the <span className="text-primary-100">Team</span>
                   </h2>
-                  <button className="inline-flex items-center justify-center px-4 py-2 bg-primary-100 text-neutral-white-100 font-semibold rounded-lg hover:bg-primary-120 transition-colors">
-                    Meet everyone
-                    <ChevronRight className="w-4 h-4 ml-2" />
-                  </button>
+                  <Button variant="default" size="md" asChild>
+                    <Link href="/team">
+                      <span>Meet everyone</span>
+                      <div className="p-2 bg-neutral-white-100 rounded-md">
+                        <ChevronRight className="h-4 w-4" color="#450932" />
+                      </div>
+                    </Link>
+                  </Button>
                 </div>
               </div>
 
@@ -378,7 +397,7 @@ export default function AboutPage() {
                 <CarouselContent>
                   {teamMembers.map((member) => (
                     <CarouselItem
-                      key={member.firstName}
+                      key={member.imageAlt}
                       className="md:basis-1/3 lg:basis-1/4"
                     >
                       <ProfileCard
