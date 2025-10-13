@@ -62,7 +62,7 @@ export default function Header() {
 
           {/* Let's Talk Button (Solid Primary) */}
           <Button variant="default" size="md" asChild>
-            <Link href="/lets-talk">
+            <Link href="/contact-us">
               <span>Let's Talk</span>
               <div className="p-2 bg-neutral-white-100 rounded-md">
                 <ChevronRight className="h-4 w-4" color="#450932" />
