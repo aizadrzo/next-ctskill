@@ -164,6 +164,7 @@ export default function MeetTheTeamPage() {
               {teamMembers["Board of Directors"].map((member) => (
                 <ProfileCard
                   key={member.id}
+                  link={`/meet-the-team/${member.id}`}
                   image={member.image}
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
@@ -191,6 +192,7 @@ export default function MeetTheTeamPage() {
               {teamMembers["Senior Team"].map((member) => (
                 <ProfileCard
                   key={member.id}
+                  link={`/meet-the-team/${member.id}`}
                   image={member.image}
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
@@ -218,6 +220,7 @@ export default function MeetTheTeamPage() {
               {teamMembers["Recruitment Team"].map((member) => (
                 <ProfileCard
                   key={member.id}
+                  link={`/meet-the-team/${member.id}`}
                   image={member.image}
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
@@ -248,6 +251,7 @@ export default function MeetTheTeamPage() {
               {teamMembers["Safeguarding & Prevention Team"].map((member) => (
                 <ProfileCard
                   key={member.id}
+                  link={`/meet-the-team/${member.id}`}
                   image={member.image}
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
