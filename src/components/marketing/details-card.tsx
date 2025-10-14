@@ -23,8 +23,8 @@ export function DetailsCard({ title, icon, descriptions }: DetailsCardProps) {
         <CardTitle className="text-lg text-left">{title}</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-2">
-        {descriptions.map((description) => (
-          <div className="flex gap-4">
+        {descriptions.map((description, index) => (
+          <div key={index} className="flex gap-4">
             <Check className="w-6 h-6 text-secondary-teal-100" />
             <CardDescription className="text-base">
               {description}

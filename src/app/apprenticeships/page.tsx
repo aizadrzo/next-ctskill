@@ -1,11 +1,95 @@
+"use client";
+
+import { ContactForm } from "@/components/forms";
 import { DetailsCard } from "@/components/marketing/details-card";
+import { ImageTitleCard } from "@/components/marketing/image-title-card";
 import { PageHeader } from "@/components/marketing/page-header";
-import { ClipboardList, Play, Search } from "lucide-react";
+import {
+  Testimonial,
+  TestimonialContent,
+} from "@/components/marketing/testimonial";
+import { VacanciesCard } from "@/components/marketing/vacancies-card";
+import { Button } from "@/components/ui/button";
+import { ChevronRight, ClipboardList, Play, Search } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
   { label: "Apprenticeships" },
+];
+
+const offeringItems = [
+  {
+    image: "/images/accountancy.png",
+    title: "Accountancy",
+  },
+  {
+    image: "/images/business-admin.png",
+    title: "Business Administration",
+  },
+  {
+    image: "/images/childcare.png",
+    title: "Childcare",
+  },
+  {
+    image: "/images/customer-service.png",
+    title: "Customer Service",
+  },
+  {
+    image: "/images/education.png",
+    title: "Education",
+  },
+  {
+    image: "/images/housing.png",
+    title: "Housing",
+  },
+  {
+    image: "/images/human-resources.png",
+    title: "Human Resources",
+  },
+  {
+    image: "/images/management.png",
+    title: "Management",
+  },
+  {
+    image: "/images/marketing.png",
+    title: "Marketing",
+  },
+  {
+    image: "/images/payroll.png",
+    title: "Payroll",
+  },
+];
+
+const vacanciesItems = [
+  {
+    title: "Involvency Apprentice This Title Can Go Up To 2 Lines",
+    location: "Hampshire",
+    salaryRange: "90-100k",
+    description:
+      "A brief description of the job. Odio mi amet commodo convallis nunc. Tincidunt mauris eu egestas eget in aliquam.",
+    taggings: ["EDUCATION & TRAINING", "ACCOUNTING", "SAMPLE TAG"],
+    jobRole: "Permanent",
+  },
+  {
+    title: "Involvency Apprentice This Title Can Go Up To 2 Lines",
+    location: "Hampshire",
+    salaryRange: "90-100k",
+    description:
+      "A brief description of the job. Odio mi amet commodo convallis nunc. Tincidunt mauris eu egestas eget in aliquam.",
+    taggings: ["EDUCATION & TRAINING", "ACCOUNTING", "SAMPLE TAG"],
+    jobRole: "Permanent",
+  },
+  {
+    title: "Involvency Apprentice This Title Can Go Up To 2 Lines",
+    location: "Hampshire",
+    salaryRange: "90-100k",
+    description:
+      "A brief description of the job. Odio mi amet commodo convallis nunc. Tincidunt mauris eu egestas eget in aliquam.",
+    taggings: ["EDUCATION & TRAINING", "ACCOUNTING", "SAMPLE TAG"],
+    jobRole: "Permanent",
+  },
 ];
 
 const staticCardItems = [
@@ -103,6 +187,7 @@ export default function Apprenticeship() {
       <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10 flex justify-between pb-16">
         {staticCardItems.map((staticCardItem) => (
           <DetailsCard
+            key={staticCardItem.name}
             title={staticCardItem.name}
             icon={staticCardItem.icon}
             descriptions={staticCardItem.content}
@@ -131,9 +216,121 @@ export default function Apprenticeship() {
           We offer <span className="text-primary-100">apprenticeships</span>{" "}
           in...
         </h4>
+        <div className="flex justify-center">
+          <div className="grid grid-cols-4 py-10 gap-4 w-fit">
+            {offeringItems.map((offeringItem) => (
+              <ImageTitleCard
+                key={offeringItem.title}
+                title={offeringItem.title}
+                image={offeringItem.image}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-      {/* Top Triangle */}
+      {/* Bottom Triangle */}
       <div className="w-full h-[68px] bg-neutral-black-10 bottom-right-slated-shape"></div>
+
+      {/* Testimonials Section*/}
+      <section className="relative overflow-hidden">
+        <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10">
+          <div className="pb-20 sm:pb-24 lg:pb-[120px]">
+            <div className=" w-full py-16">
+              <p className="font-bold text-primary-60 text-sm text-center">
+                TESTIMONIALS
+              </p>
+              <h6 className="text-lg font-semibold text-center text-primary-100">
+                Listen to what people have to say about their experience with
+                us!
+              </h6>
+            </div>
+
+            {/* Testimonials Carousel*/}
+            <div className="flex w-full justify-center gap-4">
+              <Testimonial>
+                <Image
+                  alt="Test Image"
+                  width={463}
+                  height={330}
+                  src="/images/testimonial.png"
+                />
+                <TestimonialContent
+                  title="Employer Feedback"
+                  subtitle="A certain company/sector can go here"
+                  description="A bit of description can go here. Secured a full time role within 3 weeks of completing her apprenticeship in May 2025."
+                />
+              </Testimonial>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Current Vacancies Section */}
+      <section className="relative overflow-hidden  bg-neutral-black-10">
+        <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10">
+          <div className="py-20 sm:py-24 lg:py-[120px]">
+            {/* Vacancies title */}
+            <div className="flex justify-between">
+              <h4 className="text-2xl font-semibold">Current Vacancies</h4>
+              <Button variant="default" size="md" asChild>
+                <Link href="/contact-us">
+                  <span>See more jobs</span>
+                  <div className="p-2 bg-neutral-white-100 rounded-md">
+                    <ChevronRight className="h-4 w-4" color="#450932" />
+                  </div>
+                </Link>
+              </Button>
+            </div>
+            {/* Vacancies card */}
+            <div className="flex gap-4 pt-10">
+              {vacanciesItems.map((vacanciesItem) => (
+                <VacanciesCard
+                  title={vacanciesItem.title}
+                  taggings={vacanciesItem.taggings}
+                  description={vacanciesItem.description}
+                  location={vacanciesItem.location}
+                  salaryRange={vacanciesItem.salaryRange}
+                  jobRole={vacanciesItem.jobRole}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* End of Page Contact Form Section */}
+      <section className="relative overflow-hidden ">
+        <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10">
+          <div className="py-20 sm:py-24 lg:py-[120px]">
+            <div className="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-12 lg:gap-16">
+              {/* Left Side - Content */}
+              <div className="space-y-8">
+                <h2 className="text-xl sm:text-2xl font-semibold text-black">
+                  Together, we're building{" "}
+                  <span className="text-primary-100">something better</span>
+                </h2>
+                <p className="text-base text-neutral-black-100 leading-relaxed">
+                  At CT Skills, education is just the beginning. By connecting
+                  people, creating opportunities, and giving back, we’re proud
+                  to help develop both careers and communities.
+                  <br />
+                  <br />
+                  Looking to learn, grow, or contribute? Let’s work together.
+                </p>
+              </div>
+
+              {/* Right Side - Contact Form */}
+
+              <ContactForm
+                onSubmit={(data) => {
+                  console.log("Form submitted:", data);
+                  // Handle form submission here
+                }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
