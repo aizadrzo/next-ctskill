@@ -42,6 +42,14 @@ export function ProfileCard({
         className
       )}
     >
+      <div className="absolute bottom-0 right-0 w-28 h-28 opacity-0 group-hover:opacity-100 transform translate-x-8 translate-y-8 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out z-0">
+        <Image
+          src="/decorations/corner-purple.svg"
+          alt="Corner Decoration"
+          fill
+          className="object-cover rounded-br-lg"
+        />
+      </div>
       {/* Profile Image */}
       <div className="relative w-[235px] h-[235px] rounded-lg overflow-hidden">
         <Image src={image} alt={imageAlt} fill className="object-cover" />

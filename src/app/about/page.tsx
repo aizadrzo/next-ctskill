@@ -380,7 +380,7 @@ export default function AboutPage() {
                     Meet the <span className="text-primary-100">Team</span>
                   </h2>
                   <Button variant="default" size="md" asChild>
-                    <Link href="/team">
+                    <Link href="/meet-the-team">
                       <span>Meet everyone</span>
                       <div className="p-2 bg-neutral-white-100 rounded-md">
                         <ChevronRight className="h-4 w-4" color="#450932" />
