@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import Image from "next/image";
 import { PageHeader } from "@/components/marketing/page-header";
@@ -31,6 +33,7 @@ import {
   HandshakeIcon,
   FlagIcon,
 } from "../../../public/about-icons";
+import { ContactForm } from "@/components/forms/contact-form";
 
 const breadcrumbs = [{ label: "Home", href: "/" }, { label: "About" }];
 
@@ -448,108 +451,13 @@ export default function AboutPage() {
               </div>
 
               {/* Right Side - Contact Form */}
-              <div className="bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8">
-                <div className="space-y-6">
-                  <div className="border-b border-primary-120 pb-4">
-                    <h3 className="text-xl font-semibold text-primary-100">
-                      Get in touch with us
-                    </h3>
-                  </div>
 
-                  <form className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          FIRST NAME*
-                        </label>
-                        <input
-                          type="text"
-                          className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          LAST NAME*
-                        </label>
-                        <input
-                          type="text"
-                          className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          EMAIL*
-                        </label>
-                        <input
-                          type="email"
-                          className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          TELEPHONE NUMBER*
-                        </label>
-                        <input
-                          type="tel"
-                          className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          COMPANY
-                        </label>
-                        <input
-                          type="text"
-                          className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          HOW CAN WE HELP?
-                        </label>
-                        <select className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100">
-                          <option>Select an option</option>
-                          <option>Apprenticeships</option>
-                          <option>Online Courses</option>
-                          <option>Recruitment</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-neutral-black-50">
-                        MESSAGE*
-                      </label>
-                      <textarea
-                        rows={4}
-                        className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                      />
-                    </div>
-
-                    <div className="flex items-center gap-6">
-                      <div className="flex items-center gap-2">
-                        <input type="checkbox" id="privacy" />
-                        <label
-                          htmlFor="privacy"
-                          className="text-sm text-neutral-black-100"
-                        >
-                          By submitting I agree to the privacy policy.*
-                        </label>
-                      </div>
-                      <button className="inline-flex items-center justify-center px-6 py-2 bg-primary-100 text-neutral-white-100 font-semibold rounded-lg hover:bg-primary-120 transition-colors">
-                        Submit
-                        <ChevronRight className="w-4 h-4 ml-2" />
-                      </button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+              <ContactForm
+                onSubmit={(data) => {
+                  console.log("Form submitted:", data);
+                  // Handle form submission here
+                }}
+              />
             </div>
           </div>
         </div>
