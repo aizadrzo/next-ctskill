@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { HeroSection } from "@/components/marketing/hero-section";
 import { ServicesCard } from "@/components/marketing/services-card";
@@ -12,6 +14,7 @@ import {
   IntegrityIcon,
   ServiceExcellenceIcon,
 } from "../../public/core-values-icons";
+import { ContactForm } from "@/components/forms/contact-form";
 
 // Services data for the intro section
 const introServices = [
@@ -332,14 +335,12 @@ export default function Home() {
 
               <TabsContent value="get-in-touch" className="mt-8">
                 {/* Get in touch form content */}
-                <div className="w-full max-w-[1000px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 sm:p-10">
-                  <h3 className="text-xl font-semibold text-neutral-black-100 mb-6">
-                    Get in Touch
-                  </h3>
-                  <p className="text-base text-neutral-black-100">
-                    Contact form will go here...
-                  </p>
-                </div>
+                <ContactForm
+                  onSubmit={(data) => {
+                    console.log("Form submitted:", data);
+                    // Handle form submission here
+                  }}
+                />
               </TabsContent>
 
               <TabsContent value="upload-cv" className="mt-8">
