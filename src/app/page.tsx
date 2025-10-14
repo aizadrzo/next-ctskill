@@ -14,7 +14,7 @@ import {
   IntegrityIcon,
   ServiceExcellenceIcon,
 } from "../../public/core-values-icons";
-import { ContactForm } from "@/components/forms/contact-form";
+import { ContactForm, UploadCV, UploadVacancy } from "@/components/forms";
 
 // Services data for the intro section
 const introServices = [
@@ -345,26 +345,22 @@ export default function Home() {
 
               <TabsContent value="upload-cv" className="mt-8">
                 {/* Upload CV form content */}
-                <div className="w-full max-w-[1000px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 sm:p-10">
-                  <h3 className="text-xl font-semibold text-neutral-black-100 mb-6">
-                    Upload Your CV
-                  </h3>
-                  <p className="text-base text-neutral-black-100">
-                    CV upload form will go here...
-                  </p>
-                </div>
+                <UploadCV
+                  onSubmit={(data) => {
+                    console.log("CV uploaded:", data);
+                    // Handle CV submission
+                  }}
+                />
               </TabsContent>
 
               <TabsContent value="submit-vacancy" className="mt-8">
                 {/* Submit vacancy form content */}
-                <div className="w-full max-w-[1000px] bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 sm:p-10">
-                  <h3 className="text-xl font-semibold text-neutral-black-100 mb-6">
-                    Submit a Vacancy
-                  </h3>
-                  <p className="text-base text-neutral-black-100">
-                    Vacancy submission form will go here...
-                  </p>
-                </div>
+                <UploadVacancy
+                  onSubmit={(data) => {
+                    console.log("Vacancy uploaded:", data);
+                    // Handle vacancy submission
+                  }}
+                />
               </TabsContent>
             </Tabs>
           </div>

@@ -33,7 +33,7 @@ import {
   HandshakeIcon,
   FlagIcon,
 } from "../../../public/about-icons";
-import { ContactForm } from "@/components/forms/contact-form";
+import { ContactForm } from "@/components/forms";
 
 const breadcrumbs = [{ label: "Home", href: "/" }, { label: "About" }];
 

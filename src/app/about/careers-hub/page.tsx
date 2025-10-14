@@ -12,7 +12,7 @@ import {
   Building,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ContactForm } from "@/components/forms/contact-form";
+import { ContactForm } from "@/components/forms";
 
 const careerHubItems = [
   {
