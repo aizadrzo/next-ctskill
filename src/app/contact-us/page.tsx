@@ -1,7 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { PageHeader } from "@/components/marketing/page-header";
-import { Phone, Mail, MapPin, ChevronRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ContactForm } from "@/components/forms/contact-form";
+import { Phone, Mail, MapPin } from "lucide-react";
 
 const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Contact Us" }];
 
@@ -96,125 +98,12 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-neutral-white-100 border border-neutral-black-30 rounded-lg p-8 lg:p-10">
-                <div className="space-y-6">
-                  {/* Header */}
-                  <div className="flex flex-col gap-4">
-                    <div className="border-b border-primary-120 pb-4">
-                      <h3 className="text-xl lg:text-2xl font-semibold text-neutral-black-100">
-                        Get in touch with us
-                      </h3>
-                    </div>
-                    <p className="text-base text-neutral-black-100 mt-2">
-                      Fill out the form below to contact us today.
-                      Alternatively, you can call us or send an email. We're
-                      also available for an online video call, so just let us
-                      know what works best for you!
-                    </p>
-                  </div>
-
-                  {/* Form */}
-                  <form className="space-y-6">
-                    {/* Name Fields */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          FIRST NAME*
-                        </label>
-                        <input
-                          type="text"
-                          className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          LAST NAME*
-                        </label>
-                        <input
-                          type="text"
-                          className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Contact Fields */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          EMAIL*
-                        </label>
-                        <input
-                          type="email"
-                          className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          TELEPHONE NUMBER*
-                        </label>
-                        <input
-                          type="tel"
-                          className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Additional Fields */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          COMPANY
-                        </label>
-                        <input
-                          type="text"
-                          className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label className="text-sm font-medium text-neutral-black-50">
-                          HOW CAN WE HELP?
-                        </label>
-                        <select className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100">
-                          <option>Select an option</option>
-                          <option>Apprenticeships</option>
-                          <option>Online Courses</option>
-                          <option>Recruitment</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    {/* Message Field */}
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium text-neutral-black-50">
-                        MESSAGE*
-                      </label>
-                      <textarea
-                        rows={4}
-                        className="w-full px-4 py-2 border border-neutral-black-30 rounded bg-neutral-white-100"
-                      />
-                    </div>
-
-                    {/* Submit Section */}
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                      <div className="flex items-center gap-2">
-                        <input type="checkbox" id="privacy" />
-                        <label
-                          htmlFor="privacy"
-                          className="text-sm text-neutral-black-100"
-                        >
-                          By submitting I agree to the privacy policy.*
-                        </label>
-                      </div>
-                      <Button variant="default" size="md">
-                        <span>Submit</span>
-                        <div className="p-2 bg-neutral-white-100 rounded-md">
-                          <ChevronRight className="h-4 w-4" color="#450932" />
-                        </div>
-                      </Button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+              <ContactForm
+                onSubmit={(data) => {
+                  console.log("Form submitted:", data);
+                  // Handle form submission here
+                }}
+              />
             </div>
           </div>
         </div>
