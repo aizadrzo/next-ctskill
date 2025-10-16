@@ -101,7 +101,7 @@ export function PageHeader({
           )}
 
           {/* Title */}
-          <div className="space-y-3 sm:space-y-6">
+          <div className="space-y-3 sm:space-y-6 max-w-[70vw]">
             <h1
               className={cn(
                 "text-3xl md:text-4xl font-semibold",
