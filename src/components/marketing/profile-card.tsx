@@ -1,30 +1,13 @@
 import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
 import Image from "next/image";
 import { Mail, Phone } from "lucide-react";
+import Link from "next/link";
 
 import { cn } from "@/lib/utils";
-
-// CVA for the profile card container to handle different variants
-const profileCardVariants = cva(
-  "relative flex flex-col items-center gap-6 p-7 bg-neutral-white-100 rounded-lg transition-all duration-200",
-  {
-    variants: {
-      variant: {
-        default: "border border-neutral-black-30",
-        highlighted:
-          "border-2 border-primary-100 shadow-[0px_0px_8px_0px_rgba(0,0,0,0.1)]",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-    },
-  }
-);
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 
 // Props interface for the profile card component
-export interface ProfileCardProps
-  extends VariantProps<typeof profileCardVariants> {
+export interface ProfileCardProps {
   image: string;
   imageAlt: string;
   firstName: string;
@@ -32,6 +15,7 @@ export interface ProfileCardProps
   jobTitle: string;
   email: string;
   phone: string;
+  link?: string;
   showCornerDecoration?: boolean;
   className?: string;
 }
@@ -48,11 +32,24 @@ export function ProfileCard({
   jobTitle,
   email,
   phone,
-  variant = "default",
+  link,
   className,
 }: ProfileCardProps) {
-  return (
-    <div className={cn(profileCardVariants({ variant }), className)}>
+  const CardComponent = (
+    <Card
+      className={cn(
+        "relative flex flex-col items-center gap-6 p-7 bg-neutral-white-100 rounded-lg transition-all duration-200 border-neutral-black-30 hover:border-primary-100 hover:shadow-[0px_0px_8px_0px_rgba(0,0,0,0.1)] group cursor-pointer",
+        className
+      )}
+    >
+      <div className="absolute bottom-0 right-0 w-28 h-28 opacity-0 group-hover:opacity-100 transform translate-x-8 translate-y-8 group-hover:translate-x-0 group-hover:translate-y-0 transition-all duration-300 ease-out z-0">
+        <Image
+          src="/decorations/corner-purple.svg"
+          alt="Corner Decoration"
+          fill
+          className="object-cover rounded-br-lg"
+        />
+      </div>
       {/* Profile Image */}
       <div className="relative w-[235px] h-[235px] rounded-lg overflow-hidden">
         <Image src={image} alt={imageAlt} fill className="object-cover" />
@@ -70,15 +67,17 @@ export function ProfileCard({
       </div>
 
       {/* Content Section */}
-      <div className="flex flex-col items-start gap-4 w-full">
+      <CardContent className="flex flex-col items-start gap-4 w-full px-0">
         {/* Name and Title */}
         <div className="flex flex-col gap-1">
-          <h5 className="text-xl font-semibold text-neutral-black-100">
+          <CardTitle className="text-xl font-semibold text-neutral-black-100">
             {firstName}
             <br />
             {lastName}
-          </h5>
-          <p className="text-base text-neutral-black-50">{jobTitle}</p>
+          </CardTitle>
+          <p className="text-base text-neutral-black-50 group-hover:text-neutral-black-100">
+            {jobTitle}
+          </p>
         </div>
 
         {/* Contact Information */}
@@ -86,16 +85,26 @@ export function ProfileCard({
           {/* Email */}
           <div className="flex items-center gap-4">
             <Mail className="w-5 h-6 text-primary-60" />
-            <span className="text-base text-neutral-black-50">{email}</span>
+            <span className="text-base text-neutral-black-50 group-hover:text-neutral-black-100 underline underline-offset-2">
+              {email}
+            </span>
           </div>
 
           {/* Phone */}
           <div className="flex items-center gap-4">
             <Phone className="w-5 h-6 text-primary-60" />
-            <span className="text-base text-neutral-black-50">{phone}</span>
+            <span className="text-base text-neutral-black-50 group-hover:text-neutral-black-100 underline underline-offset-2">
+              {phone}
+            </span>
           </div>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
+
+  if (link) {
+    return <Link href={link}>{CardComponent}</Link>;
+  }
+
+  return CardComponent;
 }

@@ -51,7 +51,7 @@ export default function Header() {
         {/* 3. Call-to-Action Buttons */}
         <div className="flex items-center gap-3">
           {/* Find Jobs Button (Outline) */}
-          <Button variant="outline" size="md" asChild>
+          <Button variant="outline" size="lg" asChild>
             <Link href="/find-jobs">
               <span>Find Jobs</span>
               <div className="p-2 bg-primary-100 rounded-md">
@@ -61,7 +61,7 @@ export default function Header() {
           </Button>
 
           {/* Let's Talk Button (Solid Primary) */}
-          <Button variant="default" size="md" asChild>
+          <Button variant="default" size="lg" asChild>
             <Link href="/contact-us">
               <span>Let's Talk</span>
               <div className="p-2 bg-neutral-white-100 rounded-md">
