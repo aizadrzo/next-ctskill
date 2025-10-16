@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ConnectButton } from "@/app/meet-the-team/component/connect-button";
+import { ConnectButton } from "@/components/marketing/connect-button";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -13,7 +13,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import { Phone, Mail, Linkedin, MailIcon } from "lucide-react";
+import { Phone, Mail, Linkedin } from "lucide-react";
 
 // Mock data for team member
 const teamMember = {
