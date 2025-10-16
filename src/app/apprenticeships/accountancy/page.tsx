@@ -12,13 +12,15 @@ import {
 } from "@/components/marketing/testimonial";
 import { VacanciesCard } from "@/components/marketing/vacancies-card";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { ChevronRight, ClipboardList, Play, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
-  { label: "Apprenticeships" },
+  { label: "Apprenticeships", href: "/apprenticeships" },
+  { label: "Accountancy" },
 ];
 
 const offeringItems = [
@@ -134,19 +136,40 @@ export default function Apprenticeship() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <PageHeader
-        title="Apprenticeships"
+        title="Accountancy"
         breadcrumbs={breadcrumbs}
         backgroundColor="bg-secondary-teal-10"
         titleColor="text-neutral-black-100"
-        headerImage="/images/apprenticeships2.png"
-        content="For over 20 years, we’ve helped people launch rewarding careers and supported organisations in building skilled teams through apprenticeships that blend training with real-world experience."
-        mainHeader
+        // headerImage="/images/apprenticeships2.png"
+        // content="For over 20 years, we’ve helped people launch rewarding careers and supported organisations in building skilled teams through apprenticeships that blend training with real-world experience."
+        // mainHeader
       />
 
-      {/* Intro of apprenticeships */}
+      {/* Intro of accountancy */}
       <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10">
         <div className="py-20 sm:py-24 lg:py-[120px]">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center pb-10">
+            {/* Content */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h3 className="text-3xl sm:text-xl font-semibold text-neutral-black-100">
+                  Lorem <span className="text-primary-100">Ipsum</span>
+                </h3>
+                <p className="text-m text-neutral-black-100 leading-relaxed">
+                  Kickstart your journey in accountancy or enhance your team's
+                  skills with our comprehensive accountancy apprenticeships.
+                  <br />
+                  <br />
+                  Our programmes develop future finance professionals who excel
+                  in strategic planning, critical thinking, and effective
+                  collaboration. Through our apprenticeships and courses,
+                  individuals gain practical training and confidence, equipping
+                  them for both current roles and future ambitions while
+                  actively contributing to their organisation's growth.
+                </p>
+              </div>
+            </div>
+
             {/* Video */}
             <div className="relative">
               <div className="aspect-[4/3] relative rounded-lg overflow-hidden bg-gradient-to-b from-transparent to-black">
@@ -164,26 +187,91 @@ export default function Apprenticeship() {
                 </div>
               </div>
             </div>
-
-            {/* Content */}
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h5 className="text-xl sm:text-xl font-semibold text-neutral-black-100">
-                  A bit of title{" "}
-                  <span className="text-primary-100">can go here</span>
-                </h5>
-                <p className="text-base text-neutral-black-100 leading-relaxed">
-                  Our apprenticeships incorporate the most advanced learning
-                  techniques, placing the learner's experience at the forefront
-                  of what we do. We recognise that each business is distinct,
-                  which is why our programmes can be customised to align with
-                  the specific needs of different sectors.
-                </p>
-              </div>
-            </div>
+          </div>
+          {/* Comprehensive Card Content */}
+          <div className="pt-10">
+            <Card className="border-neutral-black-30 px-8 py-6 justify-between flex-row">
+              <h5 className="text-xl font-semibold w-[389px]">
+                Comprehensive support{" "}
+                <span className="text-primary-100">at every step</span>
+              </h5>
+              <p className="w-[705px]">
+                We offer interactive group workshops focusing on AAT and
+                standard qualifications, led by experienced training
+                professionals who provide exceptional guidance. With access to
+                enhanced online resources from BPP, learners can adapt to
+                different learning styles and thrive in their studies, building
+                a bright future in accountancy.
+              </p>
+            </Card>
           </div>
         </div>
       </div>
+
+      {/* Top Triangle */}
+      <div className="w-full h-[68px] bg-neutral-black-10 top-right-slated-shape"></div>
+      {/* Carousel Section */}
+      <div className=" w-full bg-neutral-black-10 py-16 flex justify-center">
+        <div className="w-[841]">
+          <h4 className="text-2xl font-semibold text-center">
+            Learning for{" "}
+            <span className="text-primary-100">each step of your career</span>
+          </h4>
+          <p className="text-m text-center pt-2">
+            We are committed to supporting our learners throughout every stage
+            of their careers—whether it's helping them get the start they need
+            in their chosen sector or providing the knowledge necessary to
+            progress to their next step.
+          </p>
+        </div>
+      </div>
+      <div className="w-full bg-neutral-black-10 py-16 flex flex-col items-center gap-6 overflow-hidden">
+        {/* Top step indicator */}
+        <div className="flex items-center justify-center">
+          <HeaderTag
+            text="Accounts/Finance Assistant"
+            className="bg-transparent"
+          />
+          <div className="border-t border-dashed border-teal-400 w-8"></div>
+          <HeaderTag text="Assistant Accountant" />
+          <div className="border-t border-dashed border-teal-400 w-8"></div>
+          <HeaderTag
+            text="Professional Accounting Technician"
+            className="bg-transparent"
+          />
+        </div>
+
+        {/* Card container */}
+        <div className="flex justify-center gap-8 mt-8">
+          {/* Card 1 - Inactive */}
+          <CarouselLevelCard
+            level={2}
+            title="Accounts/Finance Assistant"
+            duration="15 months"
+            buttonText="Find out more"
+            className="bg-white"
+          />
+
+          {/* Card 2 - Active */}
+          <CarouselLevelCard
+            level={3}
+            title="Assistant Accountant"
+            duration="17 months"
+            buttonText="Find out more"
+          />
+
+          {/* Card 1 - Inactive */}
+          <CarouselLevelCard
+            level={4}
+            title="Professional Accounting Technician"
+            duration="15 months"
+            buttonText="Find out more"
+            className="bg-white"
+          />
+        </div>
+      </div>
+      {/* Bottom Triangle */}
+      <div className="w-full h-[68px] bg-neutral-black-10 bottom-right-slated-shape"></div>
 
       {/* Static Card Secton */}
       <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10 flex justify-between pb-16">
@@ -196,86 +284,6 @@ export default function Apprenticeship() {
           />
         ))}
       </div>
-
-      {/* Top Triangle */}
-      <div className="w-full h-[68px] bg-neutral-black-10 top-right-slated-shape"></div>
-      {/* Carousel Section */}
-      <div className=" w-full bg-neutral-black-10 py-16">
-        <h4 className="text-2xl font-semibold text-center">
-          What does a{" "}
-          <span className="text-primary-100">typical learner journey</span> look
-          like?
-        </h4>
-      </div>
-      {/* Top step indicator */}
-      <div className="flex items-center justify-center bg-neutral-black-10">
-        <HeaderTag
-          text="Accounts/Finance Assistant"
-          className="bg-transparent"
-        />
-        <div className="border-t border-dashed border-teal-400 w-8"></div>
-        <HeaderTag text="Assistant Accountant" />
-        <div className="border-t border-dashed border-teal-400 w-8"></div>
-        <HeaderTag
-          text="Professional Accounting Technician"
-          className="bg-transparent"
-        />
-      </div>
-
-      {/* Card container */}
-      <div className="flex justify-center gap-8 pt-8 bg-neutral-black-10">
-        {/* Card 1 - Inactive */}
-        <CarouselLevelCard
-          level={2}
-          title="Accounts/Finance Assistant"
-          duration="15 months"
-          buttonText="Find out more"
-          className="bg-white"
-        />
-
-        {/* Card 2 - Active */}
-        <CarouselLevelCard
-          level={3}
-          title="Assistant Accountant"
-          duration="17 months"
-          buttonText="Find out more"
-        />
-
-        {/* Card 1 - Inactive */}
-        <CarouselLevelCard
-          level={4}
-          title="Professional Accounting Technician"
-          duration="15 months"
-          buttonText="Find out more"
-          className="bg-white"
-        />
-      </div>
-
-      {/* Separator */}
-      <div className="w-full flex justify-center bg-neutral-black-10 py-16">
-        <div className="w-2/3 border border-primary-60"></div>
-      </div>
-
-      {/* Offerings */}
-      <div className=" w-full bg-neutral-black-10 py-16">
-        <h4 className="text-2xl font-semibold text-center">
-          We offer <span className="text-primary-100">apprenticeships</span>{" "}
-          in...
-        </h4>
-        <div className="flex justify-center">
-          <div className="grid grid-cols-4 py-10 gap-4 w-fit">
-            {offeringItems.map((offeringItem) => (
-              <ImageTitleCard
-                key={offeringItem.title}
-                title={offeringItem.title}
-                image={offeringItem.image}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-      {/* Bottom Triangle */}
-      <div className="w-full h-[68px] bg-neutral-black-10 bottom-right-slated-shape"></div>
 
       {/* Testimonials Section*/}
       <section className="relative overflow-hidden">
