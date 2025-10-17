@@ -75,27 +75,27 @@ export const volunteeringOrgs = [
   {
     id: 1,
     name: "National Association for Voluntary and Community Action",
-    logo: "/volunteer-logo/navca.png",
+    logo: "/volunteer-logo/navca_1.png",
   },
   {
     id: 2,
     name: "National Council for Voluntary Organisations (NCVO)",
-    logo: "/volunteer-logo/nvco.png",
+    logo: "/volunteer-logo/nvco_1.png",
   },
   {
     id: 3,
     name: "NHS Volunteering",
-    logo: "/volunteer-logo/nhs.png",
+    logo: "/volunteer-logo/nhs_1.png",
   },
   {
     id: 4,
     name: "Reach Volunteering",
-    logo: "/volunteer-logo/reach-volunteering.png",
+    logo: "/volunteer-logo/reach-volunteering_1.png",
   },
   {
     id: 5,
     name: "Volunteering Matters",
-    logo: "/volunteer-logo/volunteering-matters.png",
+    logo: "/volunteer-logo/volunteering-matters_1.png",
   },
 ];
 

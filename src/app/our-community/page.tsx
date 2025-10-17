@@ -65,6 +65,14 @@ export default function OurCommunityPage() {
               </div>
             </div>
             <div className="relative">
+              <div className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[676px] h-[670px] hidden z-0 lg:block">
+                <Image
+                  src="/images/group-1.png"
+                  alt="Background Pattern"
+                  fill
+                  className="object-contain z-0"
+                />
+              </div>
               <div className="w-full lg:w-[552px] h-[440px] rounded-lg overflow-hidden relative">
                 <Image
                   src="/images/video-placeholder.png"
@@ -110,8 +118,22 @@ export default function OurCommunityPage() {
             </h2>
           </div>
 
-          {/* Icon Boxes Grid */}
+          {/* Grid Layout with Description */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Description Text - First Grid Item */}
+            <div className="md:col-span-2 lg:col-span-1 flex items-center">
+              <p className="text-base text-neutral-black-100 text-center lg:text-left">
+                CT Skills supports personal and professional growth while
+                actively giving back through action.
+                <br />
+                <br />
+                We're proud to support causes and initiatives that make a
+                difference. Our team, learners and the employers actively
+                contribute to the wider community through various ways:
+              </p>
+            </div>
+
+            {/* Icon Boxes */}
             {communityInitiatives.map((initiative) => {
               return (
                 <IconBox
@@ -257,6 +279,14 @@ export default function OurCommunityPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative order-2 lg:order-1">
               <div className="relative flex justify-center items-center">
+                <div className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[676px] h-[670px] hidden z-0 lg:block">
+                  <Image
+                    src="/images/group-1.png"
+                    alt="Background Pattern"
+                    fill
+                    className="object-contain z-0"
+                  />
+                </div>
                 <div className="w-full lg:w-[552px] h-[440px] rounded-lg overflow-hidden relative">
                   <Image
                     src="/images/video-placeholder.png"
@@ -382,6 +412,17 @@ export default function OurCommunityPage() {
           </div>
         </div>
       </section>
+
+      {/* Triangle Separation */}
+      <div className="w-full h-full">
+        <Image
+          src="/decorations/separation-triangle.svg"
+          alt="Triangle Separation"
+          width={1440}
+          height={92}
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       {/* Contact Form Section */}
       <section className="py-20">
