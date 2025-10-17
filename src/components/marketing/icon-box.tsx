@@ -59,7 +59,7 @@ export function IconBox({
         className
       )}
     >
-      <CardContent className="flex flex-col items-center justify-center gap-4 py-6 px-0">
+      <CardContent className="flex flex-col items-center justify-center gap-4 py-6 px-0 h-full">
         {/* Image */}
         {image && (
           <div className="w-12 h-12 flex items-center justify-center">
