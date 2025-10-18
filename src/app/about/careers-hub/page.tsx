@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { PageHeader } from "@/components/marketing/page-header";
-import { ContentBoxLink } from "@/components/marketing/content-box-link";
+import { PageHeader, ContentBoxLink } from "@/components/marketing";
 import { Play } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/forms";

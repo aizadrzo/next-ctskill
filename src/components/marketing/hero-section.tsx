@@ -1,7 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { GraduationCap, Book, UserSearch } from "lucide-react";
-import { MiniServiceCard } from "@/components/marketing/mini-services-card";
+import { MiniServiceCard } from "@/components/marketing";
 
 /**
  * Features the main heading, description, and mini service cards.

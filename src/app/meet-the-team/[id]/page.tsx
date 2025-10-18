@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ConnectButton } from "@/components/marketing/connect-button";
+import { ConnectButton } from "@/components/marketing";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Badge } from "@/components/ui/badge";
 import {

@@ -1,14 +1,14 @@
 import { ContactForm } from "@/components/forms";
-import { CarouselLevelCard } from "@/components/marketing/carousel-level-card";
-import { DetailsCard } from "@/components/marketing/details-card";
-import { HeaderTag } from "@/components/marketing/header-tag";
-import { ImageTitleCard } from "@/components/marketing/image-title-card";
-import { PageHeader } from "@/components/marketing/page-header";
 import {
+  CarouselLevelCard,
+  DetailsCard,
+  HeaderTag,
+  ImageTitleCard,
+  PageHeader,
   Testimonial,
   TestimonialContent,
-} from "@/components/marketing/testimonial";
-import { VacanciesCard } from "@/components/marketing/vacancies-card";
+  VacanciesCard,
+} from "@/components/marketing";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronRight, ClipboardList, Play, Search } from "lucide-react";

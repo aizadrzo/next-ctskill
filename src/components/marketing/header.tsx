@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
  * This is a Client Component due to the use of interactive Buttons.
  * It is styled to match the Figma design exactly.
  */
-export default function Header() {
+export function Header() {
   // Navigation items to be rendered in the center
   const navItems = [
     { name: "About", href: "/about" },

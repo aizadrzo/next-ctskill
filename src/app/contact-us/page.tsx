@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PageHeader } from "@/components/marketing/page-header";
+import { PageHeader } from "@/components/marketing";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Phone, Mail, MapPin } from "lucide-react";
 

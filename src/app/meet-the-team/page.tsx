@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ProfileCard } from "@/components/marketing/profile-card";
+import { ProfileCard } from "@/components/marketing";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";

@@ -2,11 +2,13 @@ import Image from "next/image";
 import { ChevronRight, Mail, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { PageHeader } from "@/components/marketing/page-header";
-import { ProfileCard } from "@/components/marketing/profile-card";
+import {
+  PageHeader,
+  ProfileCard,
+  ConnectButton,
+  IconBox,
+} from "@/components/marketing";
 import { ContactForm } from "@/components/forms/contact-form";
-import { ConnectButton } from "@/components/marketing/connect-button";
-import { IconBox } from "@/components/marketing/icon-box";
 import {
   Carousel,
   CarouselContent,

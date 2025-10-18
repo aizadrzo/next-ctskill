@@ -1,7 +1,5 @@
 import Image from "next/image";
-import { PageHeader } from "@/components/marketing/page-header";
-import { CoreValues } from "@/components/marketing/core-values";
-import { ProfileCard } from "@/components/marketing/profile-card";
+import { PageHeader, CoreValues, ProfileCard } from "@/components/marketing";
 import { ChevronDownIcon, ChevronRight, Play } from "lucide-react";
 import Link from "next/link";
 import {

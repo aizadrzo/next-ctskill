@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { HeroSection } from "@/components/marketing/hero-section";
-import { ServicesCard } from "@/components/marketing/services-card";
-import { MiniServiceCard } from "@/components/marketing/mini-services-card";
-import { CoreValues } from "@/components/marketing/core-values";
+import {
+  HeroSection,
+  ServicesCard,
+  MiniServiceCard,
+  CoreValues,
+} from "@/components/marketing";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Play } from "lucide-react";
 import { ContactForm, UploadCV, UploadVacancy } from "@/components/forms";
