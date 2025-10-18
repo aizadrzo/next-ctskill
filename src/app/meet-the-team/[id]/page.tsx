@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
 import { ConnectButton } from "@/components/marketing/connect-button";
 import { ContactForm } from "@/components/forms/contact-form";
@@ -44,10 +41,6 @@ const breadcrumbs = [
 ];
 
 export default function TeamMemberProfile() {
-  const handleFormSubmit = (data: any) => {
-    console.log("Form submitted:", data);
-  };
-
   return (
     <div className="min-h-screen bg-neutral-white-100">
       {/* Hero Section */}
@@ -75,7 +68,7 @@ export default function TeamMemberProfile() {
                   <Breadcrumb>
                     <BreadcrumbList className="text-sm text-neutral-black-100">
                       {breadcrumbs.map((breadcrumb, index) => (
-                        <React.Fragment key={index}>
+                        <>
                           <BreadcrumbItem>
                             {breadcrumb.href ? (
                               <BreadcrumbLink
@@ -93,7 +86,7 @@ export default function TeamMemberProfile() {
                           {index < breadcrumbs.length - 1 && (
                             <BreadcrumbSeparator className="text-neutral-black-100" />
                           )}
-                        </React.Fragment>
+                        </>
                       ))}
                     </BreadcrumbList>
                   </Breadcrumb>
@@ -210,10 +203,7 @@ export default function TeamMemberProfile() {
               </div>
 
               {/* Contact Form */}
-              <ContactForm
-                onSubmit={handleFormSubmit}
-                className="border border-neutral-black-30 rounded-lg"
-              />
+              <ContactForm className="border border-neutral-black-30 rounded-lg" />
             </div>
           </div>
         </div>

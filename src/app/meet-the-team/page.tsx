@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
 import { ProfileCard } from "@/components/marketing/profile-card";
 import { Button } from "@/components/ui/button";
@@ -53,7 +50,7 @@ export default function MeetTheTeamPage() {
                 <Breadcrumb>
                   <BreadcrumbList className="text-sm text-neutral-black-100">
                     {breadcrumbs.map((breadcrumb, index) => (
-                      <React.Fragment key={index}>
+                      <>
                         <BreadcrumbItem>
                           {breadcrumb.href ? (
                             <BreadcrumbLink
@@ -71,7 +68,7 @@ export default function MeetTheTeamPage() {
                         {index < breadcrumbs.length - 1 && (
                           <BreadcrumbSeparator className="text-neutral-black-100" />
                         )}
-                      </React.Fragment>
+                      </>
                     ))}
                   </BreadcrumbList>
                 </Breadcrumb>

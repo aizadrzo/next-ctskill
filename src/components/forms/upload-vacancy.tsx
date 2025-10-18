@@ -35,11 +35,10 @@ const uploadVacancySchema = z.object({
 type UploadVacancyData = z.infer<typeof uploadVacancySchema>;
 
 interface UploadVacancyProps {
-  onSubmit?: (data: UploadVacancyData) => void;
   className?: string;
 }
 
-export function UploadVacancy({ onSubmit, className }: UploadVacancyProps) {
+export function UploadVacancy({ className }: UploadVacancyProps) {
   const form = useForm<UploadVacancyData>({
     resolver: zodResolver(uploadVacancySchema),
     defaultValues: {
@@ -55,7 +54,16 @@ export function UploadVacancy({ onSubmit, className }: UploadVacancyProps) {
   });
 
   const handleSubmit = (data: UploadVacancyData) => {
-    onSubmit?.(data);
+    // Handle form submission internally
+    console.log("Vacancy Upload submitted:", data);
+
+    // Here you can add your form submission logic:
+    // - Send data to API endpoint
+    // - Show success message
+    // - Handle errors
+    // - Redirect user
+
+    // Reset form after successful submission
     form.reset();
   };
 

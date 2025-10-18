@@ -1,5 +1,3 @@
-"use client";
-
 import { ContactForm } from "@/components/forms";
 import { CarouselLevelCard } from "@/components/marketing/carousel-level-card";
 import { DetailsCard } from "@/components/marketing/details-card";
@@ -367,12 +365,7 @@ export default function Apprenticeship() {
 
               {/* Right Side - Contact Form */}
 
-              <ContactForm
-                onSubmit={(data) => {
-                  console.log("Form submitted:", data);
-                  // Handle form submission here
-                }}
-              />
+              <ContactForm />
             </div>
           </div>
         </div>

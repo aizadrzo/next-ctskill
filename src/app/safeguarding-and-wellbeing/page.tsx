@@ -1,6 +1,3 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
 import { ChevronRight, Mail, Play } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,10 +24,6 @@ const breadcrumbs = [
 ];
 
 export default function SafeguardingAndWellbeing() {
-  const handleFormSubmit = (data: any) => {
-    console.log("Form submitted:", data);
-  };
-
   return (
     <div className="min-h-screen bg-neutral-white-100">
       {/* Hero Section */}
@@ -232,10 +225,7 @@ export default function SafeguardingAndWellbeing() {
 
             {/* Contact Form */}
             <div className="w-full lg:w-2/3">
-              <ContactForm
-                onSubmit={handleFormSubmit}
-                className="border border-neutral-black-30 rounded-lg"
-              />
+              <ContactForm className="border border-neutral-black-30 rounded-lg" />
             </div>
           </div>
         </div>

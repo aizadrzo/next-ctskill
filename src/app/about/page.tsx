@@ -1,6 +1,3 @@
-"use client";
-
-import * as React from "react";
 import Image from "next/image";
 import { PageHeader } from "@/components/marketing/page-header";
 import { CoreValues } from "@/components/marketing/core-values";
@@ -306,12 +303,7 @@ export default function AboutPage() {
 
               {/* Right Side - Contact Form */}
 
-              <ContactForm
-                onSubmit={(data) => {
-                  console.log("Form submitted:", data);
-                  // Handle form submission here
-                }}
-              />
+              <ContactForm />
             </div>
           </div>
         </div>

@@ -33,11 +33,10 @@ const uploadCVSchema = z.object({
 type UploadCVData = z.infer<typeof uploadCVSchema>;
 
 interface UploadCVProps {
-  onSubmit?: (data: UploadCVData) => void;
   className?: string;
 }
 
-export function UploadCV({ onSubmit, className }: UploadCVProps) {
+export function UploadCV({ className }: UploadCVProps) {
   const form = useForm<UploadCVData>({
     resolver: zodResolver(uploadCVSchema),
     defaultValues: {
@@ -51,7 +50,16 @@ export function UploadCV({ onSubmit, className }: UploadCVProps) {
   });
 
   const handleSubmit = (data: UploadCVData) => {
-    onSubmit?.(data);
+    // Handle form submission internally
+    console.log("CV Upload submitted:", data);
+
+    // Here you can add your form submission logic:
+    // - Send data to API endpoint
+    // - Show success message
+    // - Handle errors
+    // - Redirect user
+
+    // Reset form after successful submission
     form.reset();
   };
 

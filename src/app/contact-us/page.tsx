@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import { PageHeader } from "@/components/marketing/page-header";
 import { ContactForm } from "@/components/forms/contact-form";
@@ -98,12 +96,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <ContactForm
-                onSubmit={(data) => {
-                  console.log("Form submitted:", data);
-                  // Handle form submission here
-                }}
-              />
+              <ContactForm />
             </div>
           </div>
         </div>

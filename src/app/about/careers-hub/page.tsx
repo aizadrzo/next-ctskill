@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { PageHeader } from "@/components/marketing/page-header";
 import { ContentBoxLink } from "@/components/marketing/content-box-link";
@@ -163,12 +162,7 @@ export default function CareersHubPage() {
             </Card>
 
             {/* Contact Form */}
-            <ContactForm
-              onSubmit={(data) => {
-                console.log("Form submitted:", data);
-                // Handle form submission here
-              }}
-            />
+            <ContactForm />
           </div>
         </div>
       </section>
