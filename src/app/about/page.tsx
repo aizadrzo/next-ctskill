@@ -5,13 +5,6 @@ import Image from "next/image";
 import { PageHeader } from "@/components/marketing/page-header";
 import { CoreValues } from "@/components/marketing/core-values";
 import { ProfileCard } from "@/components/marketing/profile-card";
-import {
-  PrideIcon,
-  RespectIcon,
-  AccountabilityIcon,
-  IntegrityIcon,
-  ServiceExcellenceIcon,
-} from "../../../public/core-values-icons";
 import { ChevronDownIcon, ChevronRight, Play } from "lucide-react";
 import Link from "next/link";
 import {
@@ -28,148 +21,10 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-import {
-  CheckmarkIcon,
-  HandshakeIcon,
-  FlagIcon,
-} from "../../../public/about-icons";
 import { ContactForm } from "@/components/forms";
+import { coreValues, teamMembers, whyChooseUsItems } from "./data";
 
 const breadcrumbs = [{ label: "Home", href: "/" }, { label: "About" }];
-
-const coreValues = [
-  {
-    icon: (
-      <PrideIcon className="absolute bottom-0 left-0 w-15 h-15 sm:w-12 sm:h-12 text-primary-60 opacity-50 z-0" />
-    ),
-    title: "Pride",
-    description: "A commitment to quality and achieving meaningful results",
-  },
-  {
-    icon: (
-      <RespectIcon className="absolute bottom-0 left-0 w-15 h-15 sm:w-12 sm:h-12 text-primary-60 opacity-50 z-0" />
-    ),
-    title: "Respect",
-    description: "Listening, valuing, and supporting every individual",
-  },
-  {
-    icon: (
-      <AccountabilityIcon className="absolute bottom-0 left-0 w-15 h-15 sm:w-12 sm:h-12 text-primary-60 opacity-50 z-0" />
-    ),
-    title: "Accountability",
-    description: "Taking ownership and delivering on promises",
-  },
-  {
-    icon: (
-      <IntegrityIcon className="absolute bottom-0 left-0 w-15 h-15 sm:w-12 sm:h-12 text-primary-60 opacity-50 z-0" />
-    ),
-    title: "Integrity",
-    description: "Acting with honesty, transparency, and purpose",
-  },
-  {
-    icon: (
-      <ServiceExcellenceIcon className="absolute bottom-0 left-0 w-15 h-15 sm:w-12 sm:h-12 text-primary-60 opacity-50 z-0" />
-    ),
-    title: "Service Excellence",
-    description: "Striving to exceed expectations at every opportunity",
-  },
-] as const;
-
-const teamMembers = [
-  {
-    image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram1",
-    firstName: "Nicola",
-    lastName: "Aram",
-    jobTitle: "Marketing Manager",
-    email: "info@ctskills.co.uk",
-    phone: "012345678",
-  },
-  {
-    image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram2",
-    firstName: "Nicola",
-    lastName: "Aram",
-    jobTitle: "Marketing Manager",
-    email: "info@ctskills.co.uk",
-    phone: "012345678",
-  },
-  {
-    image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram3",
-    firstName: "Nicola",
-    lastName: "Aram",
-    jobTitle: "Marketing Manager",
-    email: "info@ctskills.co.uk",
-    phone: "012345678",
-  },
-  {
-    image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram4",
-    firstName: "Nicola",
-    lastName: "Aram",
-    jobTitle: "Marketing Manager",
-    email: "info@ctskills.co.uk",
-    phone: "012345678",
-  },
-  {
-    image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram5",
-    firstName: "Nicola",
-    lastName: "Aram",
-    jobTitle: "Marketing Manager",
-    email: "info@ctskills.co.uk",
-    phone: "012345678",
-  },
-  {
-    image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram6",
-    firstName: "Nicola",
-    lastName: "Aram",
-    jobTitle: "Marketing Manager",
-    email: "info@ctskills.co.uk",
-    phone: "012345678",
-  },
-  {
-    image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram7",
-    firstName: "Nicola",
-    lastName: "Aram",
-    jobTitle: "Marketing Manager",
-    email: "info@ctskills.co.uk",
-    phone: "012345678",
-  },
-  {
-    image: "/images/team/nicola-aram.jpg",
-    imageAlt: "Nicola Aram8",
-    firstName: "Nicola",
-    lastName: "Aram",
-    jobTitle: "Marketing Manager",
-    email: "info@ctskills.co.uk",
-    phone: "012345678",
-  },
-] as const;
-
-const whyChooseUsItems = [
-  {
-    icon: <FlagIcon className="w-10 h-10 text-neutral-white-100" />,
-    title: "Proven Success",
-    description:
-      "With over 20 years of experience, we have a proven track record of success in developing careers and companies.",
-  },
-  {
-    icon: <CheckmarkIcon className="w-10 h-10 text-neutral-white-100" />,
-    title: "Expert Team",
-    description:
-      "Our experienced team is passionate about delivering training and recruitment with impact.",
-  },
-  {
-    icon: <HandshakeIcon className="w-10 h-10 text-neutral-white-100" />,
-    title: "Engaging Learning Environment",
-    description:
-      "We create engaging learning environments that help individuals reach their full potential.",
-  },
-] as const;
 
 export default function AboutPage() {
   return (
@@ -182,17 +37,17 @@ export default function AboutPage() {
         {/* Skewed Background Element */}
         <div className="absolute inset-0 w-full h-full transform skew-y-[6deg] origin-top-right z-0"></div>
 
-        <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10">
-          <div className="py-20 sm:py-24 lg:py-[120px]">
+        <div className="container mx-auto px-6 md:px-10 lg:px-[100px] relative z-10">
+          <div className="py-20 md:py-24 lg:py-[120px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Content */}
               <div className="space-y-8">
                 <div className="space-y-6">
-                  <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-black-100">
+                  <h2 className="text-2xl md:text-3xl font-semibold text-neutral-black-100">
                     Welcome to{" "}
                     <span className="text-primary-100">CT Skills</span>
                   </h2>
-                  <p className="text-base text-neutral-black-100 leading-relaxed">
+                  <p className="text-base md:text-lg text-neutral-black-100 leading-relaxed">
                     Your trusted partner in{" "}
                     <b>empowering individuals and businesses</b> through{" "}
                     <b>education and training</b>.
@@ -205,10 +60,10 @@ export default function AboutPage() {
                 </div>
 
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-semibold text-neutral-black-100">
+                  <h3 className="text-xl md:text-2xl font-semibold text-neutral-black-100">
                     Our <span className="text-primary-100">Mission</span>
                   </h3>
-                  <p className="text-base text-neutral-black-100 leading-relaxed">
+                  <p className="text-base md:text-lg text-neutral-black-100 leading-relaxed">
                     Our mission is straightforward: to be the provider of choice
                     for career development and apprenticeship training.
                     <br />
@@ -336,7 +191,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10">
           <div className="py-20 sm:py-24 lg:py-[120px]">
             <div className="text-center space-y-12">
-              <h2 className="text-sm font-normal text-primary-60 uppercase tracking-wider">
+              <h2 className="text-sm font-semibold text-primary-60 uppercase tracking-wider">
                 ACCREDITATIONS & AWARDS
               </h2>
 
@@ -404,14 +259,13 @@ export default function AboutPage() {
                       className="md:basis-1/3 lg:basis-1/4"
                     >
                       <ProfileCard
-                        image={member.image}
+                        image="/images/members.png"
                         imageAlt={member.imageAlt}
                         firstName={member.firstName}
                         lastName={member.lastName}
                         jobTitle={member.jobTitle}
                         email={member.email}
                         phone={member.phone}
-                        variant="default"
                         showCornerDecoration={true}
                       />
                     </CarouselItem>
@@ -427,16 +281,16 @@ export default function AboutPage() {
 
       {/* End of Page Contact Form Section */}
       <section className="relative overflow-hidden bg-neutral-black-10">
-        <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] relative z-10">
-          <div className="py-20 sm:py-24 lg:py-[120px]">
+        <div className="container mx-auto px-6 md:px-10 lg:px-[100px] relative z-10">
+          <div className="py-20 md:py-24 lg:py-[120px]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
               {/* Left Side - Content */}
               <div className="space-y-8">
-                <h2 className="text-xl sm:text-2xl font-semibold text-black">
+                <h2 className="text-xl md:text-2xl font-semibold text-black">
                   Join us on the{" "}
                   <span className="text-primary-100">journey</span>
                 </h2>
-                <p className="text-base text-neutral-black-100 leading-relaxed">
+                <p className="text-base md:text-lg text-neutral-black-100 leading-relaxed">
                   Whether you're looking to upskill or develop your team, CT
                   Skills is here to support you. Explore our programmes today
                   and take your first step towards success!

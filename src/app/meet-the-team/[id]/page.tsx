@@ -104,7 +104,7 @@ export default function TeamMemberProfile() {
               {/* Image */}
               <div className="w-[235px] h-[235px] rounded-lg overflow-hidden">
                 <Image
-                  src={teamMember.image}
+                  src="/images/members.png"
                   alt={`${teamMember.firstName} ${teamMember.lastName}`}
                   width={235}
                   height={235}

@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import Image from "next/image";
 import { ProfileCard } from "@/components/marketing/profile-card";
 import { Button } from "@/components/ui/button";
@@ -22,7 +23,6 @@ import {
 } from "@/components/ui/breadcrumb";
 import { ChevronRight, Search } from "lucide-react";
 import { teamMembers } from "./data";
-import * as React from "react";
 
 const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Meet the Team" }];
 
@@ -165,7 +165,7 @@ export default function MeetTheTeamPage() {
                 <ProfileCard
                   key={member.id}
                   link={`/meet-the-team/${member.id}`}
-                  image={member.image}
+                  image="/images/members.png"
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
                   lastName={member.lastName}
@@ -193,7 +193,7 @@ export default function MeetTheTeamPage() {
                 <ProfileCard
                   key={member.id}
                   link={`/meet-the-team/${member.id}`}
-                  image={member.image}
+                  image="/images/members.png"
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
                   lastName={member.lastName}
@@ -221,7 +221,7 @@ export default function MeetTheTeamPage() {
                 <ProfileCard
                   key={member.id}
                   link={`/meet-the-team/${member.id}`}
-                  image={member.image}
+                  image="/images/members.png"
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
                   lastName={member.lastName}
@@ -252,7 +252,7 @@ export default function MeetTheTeamPage() {
                 <ProfileCard
                   key={member.id}
                   link={`/meet-the-team/${member.id}`}
-                  image={member.image}
+                  image="/images/members.png"
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
                   lastName={member.lastName}

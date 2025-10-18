@@ -51,7 +51,7 @@ export function ProfileCard({
         />
       </div>
       {/* Profile Image */}
-      <div className="relative w-[235px] h-[235px] rounded-lg overflow-hidden">
+      <div className="relative w-full h-[300px] rounded-lg overflow-hidden">
         <Image src={image} alt={imageAlt} fill className="object-cover" />
 
         {/* LinkedIn Icon Overlay */}
