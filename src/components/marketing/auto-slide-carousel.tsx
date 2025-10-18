@@ -77,4 +77,4 @@ const AutoSlideCarousel: React.FC<PropType> = (props) => {
   );
 };
 
-export default AutoSlideCarousel;
+export { AutoSlideCarousel };

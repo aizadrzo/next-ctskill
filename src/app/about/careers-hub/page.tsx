@@ -1,56 +1,10 @@
-"use client";
 import Image from "next/image";
-import { PageHeader } from "@/components/marketing/page-header";
-import { ContentBoxLink } from "@/components/marketing/content-box-link";
-import {
-  GraduationCap,
-  Briefcase,
-  TrendingUp,
-  Search,
-  MessageCircle,
-  Users,
-  Building,
-} from "lucide-react";
+import { PageHeader, ContentBoxLink } from "@/components/marketing";
+import { Play } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ContactForm } from "@/components/forms";
 
-const careerHubItems = [
-  {
-    title: "Starting Your Apprenticeship Journey",
-    icon: <GraduationCap className="w-8 h-8" />,
-    iconColor: "teal" as const,
-  },
-  {
-    title: "Career Toolkit",
-    icon: <Briefcase className="w-8 h-8" />,
-    iconColor: "orange" as const,
-  },
-  {
-    title: "Career Progression Routes",
-    icon: <TrendingUp className="w-8 h-8" />,
-    iconColor: "magenta" as const,
-  },
-  {
-    title: "Job Searching",
-    icon: <Search className="w-8 h-8" />,
-    iconColor: "orange" as const,
-  },
-  {
-    title: "Careers Advice",
-    icon: <MessageCircle className="w-8 h-8" />,
-    iconColor: "magenta" as const,
-  },
-  {
-    title: "Resource for Parents and Carers",
-    icon: <Users className="w-8 h-8" />,
-    iconColor: "teal" as const,
-  },
-  {
-    title: "Employer Resources",
-    icon: <Building className="w-8 h-8" />,
-    iconColor: "magenta" as const,
-  },
-] as const;
+import { careerHubItems } from "../data";
 
 const breadcrumbs = [
   { label: "Home", href: "/" },
@@ -74,11 +28,11 @@ export default function CareersHubPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Content */}
               <div className="space-y-6">
-                <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-black-100">
+                <h2 className="text-2xl md:text-3xl font-semibold text-neutral-black-100">
                   Find Your Path,{" "}
                   <span className="text-primary-100">Shape Your Future</span>
                 </h2>
-                <p className="text-base text-neutral-black-100 leading-relaxed">
+                <p className="text-base md:text-lg text-neutral-black-100 leading-relaxed">
                   Welcome to CT Careers Hub – the place to kick-start your
                   journey and make your career goals happen. Whether you're just
                   getting started or figuring out what’s next, the CT Skills
@@ -91,16 +45,26 @@ export default function CareersHubPage() {
 
               {/* Video */}
               <div className="relative">
-                <div className="aspect-[4/3] relative rounded-lg overflow-hidden bg-gradient-to-b from-transparent to-black">
+                <div className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 w-[676px] h-[670px] hidden z-0 lg:block">
+                  <Image
+                    src="/images/group-1.png"
+                    alt="Background Pattern"
+                    fill
+                    className="object-contain z-0"
+                  />
+                </div>
+                <div className="w-full lg:w-[552px] h-[440px] rounded-lg overflow-hidden relative">
                   <Image
                     src="/images/video-placeholder.png"
-                    alt="CT Skills Video"
+                    alt="Video Placeholder"
                     fill
                     className="object-cover"
                   />
                   {/* Play Button Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-[74px] h-[74px] bg-neutral-white-100 rounded-full flex items-center justify-center shadow-lg"></div>
+                    <div className="w-[74px] h-[74px] bg-neutral-white-100 rounded-full flex items-center justify-center shadow-lg">
+                      <Play className="w-8 h-8 text-primary-100 ml-1" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -121,11 +85,11 @@ export default function CareersHubPage() {
             height={316}
           />
         </div>
-        <div className="py-16 sm:py-20 lg:py-24 relative z-10">
-          <div className="container mx-auto px-6 sm:px-10 lg:px-[100px] pt-6 lg:pt-24">
+        <div className="py-16 md:py-20 lg:py-24 relative z-10">
+          <div className="container mx-auto px-6 md:px-10 lg:px-[100px] pt-6 lg:pt-24">
             {/* Main Container */}
             <div className="flex flex-col">
-              <h2 className="text-2xl sm:text-3xl font-semibold text-neutral-black-100 pb-8">
+              <h2 className="text-2xl md:text-3xl font-semibold text-neutral-black-100 pb-8">
                 What can we help you with?
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -143,6 +107,17 @@ export default function CareersHubPage() {
           </div>
         </div>
       </section>
+
+      {/* Triangle Separation */}
+      <div className="w-full h-full">
+        <Image
+          src="/decorations/separation-triangle.svg"
+          alt="Triangle Separation"
+          width={1440}
+          height={120}
+          className="w-full h-full object-cover scale-x-[-1]"
+        />
+      </div>
 
       {/* MeetCareerAdvisor Section */}
       <section className="py-20 bg-white relative overflow-hidden">
@@ -169,13 +144,13 @@ export default function CareersHubPage() {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <CardTitle className="text-2xl lg:text-3xl text-neutral-black-100 flex-1 text-left">
+                  <CardTitle className="text-2xl md:text-3xl text-neutral-black-100 flex-1 text-left">
                     Meet Your Careers Advisor
                   </CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="mt-auto">
-                <p className="text-lg text-neutral-black-100">
+                <p className="text-base md:text-lg text-neutral-black-100">
                   Whether you're unsure where to start or ready to take the next
                   step, our Careers Advisor, Emma, is here to help. With expert
                   guidance, personalised support, and a deep understanding of
@@ -186,12 +161,7 @@ export default function CareersHubPage() {
             </Card>
 
             {/* Contact Form */}
-            <ContactForm
-              onSubmit={(data) => {
-                console.log("Form submitted:", data);
-                // Handle form submission here
-              }}
-            />
+            <ContactForm />
           </div>
         </div>
       </section>

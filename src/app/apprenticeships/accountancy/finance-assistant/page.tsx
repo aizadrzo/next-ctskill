@@ -1,11 +1,11 @@
-"use client";
-
 import { ContactForm } from "@/components/forms";
-import { CarouselLevelCard } from "@/components/marketing/carousel-level-card";
-import { DetailsCard } from "@/components/marketing/details-card";
-import { HeaderTag } from "@/components/marketing/header-tag";
-import { PageHeader } from "@/components/marketing/page-header";
-import { VacanciesCard } from "@/components/marketing/vacancies-card";
+import {
+  CarouselLevelCard,
+  DetailsCard,
+  HeaderTag,
+  PageHeader,
+  VacanciesCard,
+} from "@/components/marketing";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChevronRight, ClipboardList, Play, Search } from "lucide-react";
@@ -364,12 +364,7 @@ export default function Apprenticeship() {
 
               {/* Right Side - Contact Form */}
 
-              <ContactForm
-                onSubmit={(data) => {
-                  console.log("Form submitted:", data);
-                  // Handle form submission here
-                }}
-              />
+              <ContactForm />
             </div>
           </div>
         </div>

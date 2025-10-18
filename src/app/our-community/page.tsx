@@ -1,5 +1,9 @@
-import { PageHeader } from "@/components/marketing/page-header";
-import { IconBox } from "@/components/marketing/icon-box";
+import {
+  PageHeader,
+  IconBox,
+  CoreValues,
+  AutoSlideCarousel,
+} from "@/components/marketing";
 import { ContactForm } from "@/components/forms";
 import {
   Card,
@@ -19,8 +23,6 @@ import {
   coreValues,
   volunteeringOrgs,
 } from "./data";
-import { CoreValues } from "@/components/marketing/core-values";
-import AutoSlideCarousel from "@/components/marketing/auto-slide-carousel";
 import Link from "next/link";
 
 export default function OurCommunityPage() {

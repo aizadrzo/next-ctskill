@@ -8,7 +8,6 @@ export const teamMembers = {
         jobTitle: "Marketing Manager",
         email: "info@ctskills.co.uk",
         phone: "012345678",
-        image: "/images/team-member-1.jpg",
       },
       {
         id: 2,
@@ -17,7 +16,6 @@ export const teamMembers = {
         jobTitle: "CEO",
         email: "john@ctskills.co.uk",
         phone: "012345679",
-        image: "/images/team-member-2.jpg",
       },
       {
         id: 3,
@@ -26,7 +24,6 @@ export const teamMembers = {
         jobTitle: "Director",
         email: "sarah@ctskills.co.uk",
         phone: "012345680",
-        image: "/images/team-member-3.jpg",
       },
       {
         id: 4,
@@ -35,7 +32,6 @@ export const teamMembers = {
         jobTitle: "Finance Director",
         email: "michael@ctskills.co.uk",
         phone: "012345681",
-        image: "/images/team-member-4.jpg",
       },
     ],
     "Senior Team": [
@@ -46,7 +42,6 @@ export const teamMembers = {
         jobTitle: "Operations Manager",
         email: "emma@ctskills.co.uk",
         phone: "012345682",
-        image: "/images/team-member-5.jpg",
       },
       {
         id: 6,
@@ -55,7 +50,6 @@ export const teamMembers = {
         jobTitle: "Head of Training",
         email: "david@ctskills.co.uk",
         phone: "012345683",
-        image: "/images/team-member-6.jpg",
       },
       {
         id: 7,
@@ -64,7 +58,6 @@ export const teamMembers = {
         jobTitle: "Quality Manager",
         email: "lisa@ctskills.co.uk",
         phone: "012345684",
-        image: "/images/team-member-7.jpg",
       },
       {
         id: 8,
@@ -73,7 +66,6 @@ export const teamMembers = {
         jobTitle: "IT Manager",
         email: "robert@ctskills.co.uk",
         phone: "012345685",
-        image: "/images/team-member-8.jpg",
       },
       {
         id: 9,
@@ -82,7 +74,7 @@ export const teamMembers = {
         jobTitle: "HR Manager",
         email: "jennifer@ctskills.co.uk",
         phone: "012345686",
-        image: "/images/team-member-9.jpg",
+        
       },
       {
         id: 10,
@@ -91,7 +83,6 @@ export const teamMembers = {
         jobTitle: "Compliance Manager",
         email: "thomas@ctskills.co.uk",
         phone: "012345687",
-        image: "/images/team-member-10.jpg",
       },
     ],
     "Recruitment Team": [
@@ -102,7 +93,7 @@ export const teamMembers = {
         jobTitle: "Recruitment Specialist",
         email: "amanda@ctskills.co.uk",
         phone: "012345688",
-        image: "/images/team-member-11.jpg",
+        
       },
       {
         id: 12,
@@ -111,7 +102,6 @@ export const teamMembers = {
         jobTitle: "Talent Acquisition",
         email: "james@ctskills.co.uk",
         phone: "012345689",
-        image: "/images/team-member-12.jpg",
       },
       {
         id: 13,
@@ -120,7 +110,7 @@ export const teamMembers = {
         jobTitle: "Recruitment Coordinator",
         email: "rachel@ctskills.co.uk",
         phone: "012345690",
-        image: "/images/team-member-13.jpg",
+        
       },
       {
         id: 14,
@@ -129,7 +119,6 @@ export const teamMembers = {
         jobTitle: "Senior Recruiter",
         email: "mark@ctskills.co.uk",
         phone: "012345691",
-        image: "/images/team-member-14.jpg",
       },
       {
         id: 15,
@@ -138,7 +127,6 @@ export const teamMembers = {
         jobTitle: "Recruitment Advisor",
         email: "sophie@ctskills.co.uk",
         phone: "012345692",
-        image: "/images/team-member-15.jpg",
       },
       {
         id: 16,
@@ -147,7 +135,6 @@ export const teamMembers = {
         jobTitle: "Talent Manager",
         email: "chris@ctskills.co.uk",
         phone: "012345693",
-        image: "/images/team-member-16.jpg",
       },
     ],
     "Safeguarding & Prevention Team": [
@@ -158,7 +145,6 @@ export const teamMembers = {
         jobTitle: "Safeguarding Officer",
         email: "helen@ctskills.co.uk",
         phone: "012345694",
-        image: "/images/team-member-17.jpg",
       },
       {
         id: 18,
@@ -167,7 +153,6 @@ export const teamMembers = {
         jobTitle: "Prevention Specialist",
         email: "peter@ctskills.co.uk",
         phone: "012345695",
-        image: "/images/team-member-18.jpg",
       },
       {
         id: 19,
@@ -176,7 +161,6 @@ export const teamMembers = {
         jobTitle: "Wellbeing Coordinator",
         email: "michelle@ctskills.co.uk",
         phone: "012345696",
-        image: "/images/team-member-19.jpg",
       },
       {
         id: 20,
@@ -185,7 +169,6 @@ export const teamMembers = {
         jobTitle: "Support Manager",
         email: "kevin@ctskills.co.uk",
         phone: "012345697",
-        image: "/images/team-member-20.jpg",
       },
       {
         id: 21,
@@ -194,7 +177,6 @@ export const teamMembers = {
         jobTitle: "Safeguarding Lead",
         email: "nicole@ctskills.co.uk",
         phone: "012345698",
-        image: "/images/team-member-21.jpg",
       },
       {
         id: 22,
@@ -203,7 +185,6 @@ export const teamMembers = {
         jobTitle: "Prevention Manager",
         email: "daniel@ctskills.co.uk",
         phone: "012345699",
-        image: "/images/team-member-22.jpg",
       },
     ],
   };

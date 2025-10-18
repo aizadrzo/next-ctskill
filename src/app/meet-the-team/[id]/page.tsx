@@ -1,8 +1,5 @@
-"use client";
-
-import React from "react";
 import Image from "next/image";
-import { ConnectButton } from "@/components/marketing/connect-button";
+import { ConnectButton } from "@/components/marketing";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -44,10 +41,6 @@ const breadcrumbs = [
 ];
 
 export default function TeamMemberProfile() {
-  const handleFormSubmit = (data: any) => {
-    console.log("Form submitted:", data);
-  };
-
   return (
     <div className="min-h-screen bg-neutral-white-100">
       {/* Hero Section */}
@@ -75,7 +68,7 @@ export default function TeamMemberProfile() {
                   <Breadcrumb>
                     <BreadcrumbList className="text-sm text-neutral-black-100">
                       {breadcrumbs.map((breadcrumb, index) => (
-                        <React.Fragment key={index}>
+                        <>
                           <BreadcrumbItem>
                             {breadcrumb.href ? (
                               <BreadcrumbLink
@@ -93,7 +86,7 @@ export default function TeamMemberProfile() {
                           {index < breadcrumbs.length - 1 && (
                             <BreadcrumbSeparator className="text-neutral-black-100" />
                           )}
-                        </React.Fragment>
+                        </>
                       ))}
                     </BreadcrumbList>
                   </Breadcrumb>
@@ -104,7 +97,7 @@ export default function TeamMemberProfile() {
               {/* Image */}
               <div className="w-[235px] h-[235px] rounded-lg overflow-hidden">
                 <Image
-                  src={teamMember.image}
+                  src="/images/members.png"
                   alt={`${teamMember.firstName} ${teamMember.lastName}`}
                   width={235}
                   height={235}
@@ -210,10 +203,7 @@ export default function TeamMemberProfile() {
               </div>
 
               {/* Contact Form */}
-              <ContactForm
-                onSubmit={handleFormSubmit}
-                className="border border-neutral-black-30 rounded-lg"
-              />
+              <ContactForm className="border border-neutral-black-30 rounded-lg" />
             </div>
           </div>
         </div>

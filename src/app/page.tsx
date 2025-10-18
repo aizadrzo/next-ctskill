@@ -1,10 +1,10 @@
-"use client";
-
 import Image from "next/image";
-import { HeroSection } from "@/components/marketing/hero-section";
-import { ServicesCard } from "@/components/marketing/services-card";
-import { MiniServiceCard } from "@/components/marketing/mini-services-card";
-import { CoreValues } from "@/components/marketing/core-values";
+import {
+  HeroSection,
+  ServicesCard,
+  MiniServiceCard,
+  CoreValues,
+} from "@/components/marketing";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Play } from "lucide-react";
 import { ContactForm, UploadCV, UploadVacancy } from "@/components/forms";
@@ -242,32 +242,17 @@ export default function Home() {
 
               <TabsContent value="get-in-touch" className="mt-8">
                 {/* Get in touch form content */}
-                <ContactForm
-                  onSubmit={(data) => {
-                    console.log("Form submitted:", data);
-                    // Handle form submission here
-                  }}
-                />
+                <ContactForm />
               </TabsContent>
 
               <TabsContent value="upload-cv" className="mt-8">
                 {/* Upload CV form content */}
-                <UploadCV
-                  onSubmit={(data) => {
-                    console.log("CV uploaded:", data);
-                    // Handle CV submission
-                  }}
-                />
+                <UploadCV />
               </TabsContent>
 
               <TabsContent value="submit-vacancy" className="mt-8">
                 {/* Submit vacancy form content */}
-                <UploadVacancy
-                  onSubmit={(data) => {
-                    console.log("Vacancy uploaded:", data);
-                    // Handle vacancy submission
-                  }}
-                />
+                <UploadVacancy />
               </TabsContent>
             </Tabs>
           </div>

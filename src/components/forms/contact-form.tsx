@@ -40,11 +40,10 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
 interface ContactFormProps {
-  onSubmit?: (data: ContactFormData) => void;
   className?: string;
 }
 
-export function ContactForm({ onSubmit, className }: ContactFormProps) {
+export function ContactForm({ className }: ContactFormProps) {
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -60,7 +59,16 @@ export function ContactForm({ onSubmit, className }: ContactFormProps) {
   });
 
   const handleSubmit = (data: ContactFormData) => {
-    onSubmit?.(data);
+    // Handle form submission internally
+    console.log("Form submitted:", data);
+
+    // Here you can add your form submission logic:
+    // - Send data to API endpoint
+    // - Show success message
+    // - Handle errors
+    // - Redirect user
+
+    // Reset form after successful submission
     form.reset();
   };
 

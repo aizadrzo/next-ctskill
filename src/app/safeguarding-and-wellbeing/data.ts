@@ -1,4 +1,4 @@
-import { IconBoxProps } from "@/components/marketing/icon-box";
+import { IconBoxProps } from "@/components/marketing";
 
 type SafeguardingTopic = {
     id: number;

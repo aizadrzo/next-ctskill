@@ -1,16 +1,14 @@
-"use client";
-
 import { ContactForm } from "@/components/forms";
-import { CarouselLevelCard } from "@/components/marketing/carousel-level-card";
-import { DetailsCard } from "@/components/marketing/details-card";
-import { HeaderTag } from "@/components/marketing/header-tag";
-import { ImageTitleCard } from "@/components/marketing/image-title-card";
-import { PageHeader } from "@/components/marketing/page-header";
 import {
+  CarouselLevelCard,
+  DetailsCard,
+  HeaderTag,
+  ImageTitleCard,
+  PageHeader,
   Testimonial,
   TestimonialContent,
-} from "@/components/marketing/testimonial";
-import { VacanciesCard } from "@/components/marketing/vacancies-card";
+  VacanciesCard,
+} from "@/components/marketing";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ClipboardList, Play, Search } from "lucide-react";
 import Image from "next/image";
@@ -66,6 +64,7 @@ const offeringItems = [
 
 const vacanciesItems = [
   {
+    key: 1,
     title: "Involvency Apprentice This Title Can Go Up To 2 Lines",
     location: "Hampshire",
     salaryRange: "90-100k",
@@ -75,6 +74,7 @@ const vacanciesItems = [
     jobRole: "Permanent",
   },
   {
+    key: 2,
     title: "Involvency Apprentice This Title Can Go Up To 2 Lines",
     location: "Hampshire",
     salaryRange: "90-100k",
@@ -84,6 +84,7 @@ const vacanciesItems = [
     jobRole: "Permanent",
   },
   {
+    key: 3,
     title: "Involvency Apprentice This Title Can Go Up To 2 Lines",
     location: "Hampshire",
     salaryRange: "90-100k",
@@ -331,6 +332,7 @@ export default function Apprenticeship() {
             <div className="flex gap-4 pt-10">
               {vacanciesItems.map((vacanciesItem) => (
                 <VacanciesCard
+                  key={vacanciesItem.key}
                   title={vacanciesItem.title}
                   taggings={vacanciesItem.taggings}
                   description={vacanciesItem.description}
@@ -367,12 +369,7 @@ export default function Apprenticeship() {
 
               {/* Right Side - Contact Form */}
 
-              <ContactForm
-                onSubmit={(data) => {
-                  console.log("Form submitted:", data);
-                  // Handle form submission here
-                }}
-              />
+              <ContactForm />
             </div>
           </div>
         </div>

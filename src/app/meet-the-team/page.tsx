@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { ProfileCard } from "@/components/marketing/profile-card";
+import { ProfileCard } from "@/components/marketing";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
@@ -22,7 +20,6 @@ import {
 } from "@/components/ui/breadcrumb";
 import { ChevronRight, Search } from "lucide-react";
 import { teamMembers } from "./data";
-import * as React from "react";
 
 const breadcrumbs = [{ label: "Home", href: "/" }, { label: "Meet the Team" }];
 
@@ -53,7 +50,7 @@ export default function MeetTheTeamPage() {
                 <Breadcrumb>
                   <BreadcrumbList className="text-sm text-neutral-black-100">
                     {breadcrumbs.map((breadcrumb, index) => (
-                      <React.Fragment key={index}>
+                      <>
                         <BreadcrumbItem>
                           {breadcrumb.href ? (
                             <BreadcrumbLink
@@ -71,7 +68,7 @@ export default function MeetTheTeamPage() {
                         {index < breadcrumbs.length - 1 && (
                           <BreadcrumbSeparator className="text-neutral-black-100" />
                         )}
-                      </React.Fragment>
+                      </>
                     ))}
                   </BreadcrumbList>
                 </Breadcrumb>
@@ -165,7 +162,7 @@ export default function MeetTheTeamPage() {
                 <ProfileCard
                   key={member.id}
                   link={`/meet-the-team/${member.id}`}
-                  image={member.image}
+                  image="/images/members.png"
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
                   lastName={member.lastName}
@@ -193,7 +190,7 @@ export default function MeetTheTeamPage() {
                 <ProfileCard
                   key={member.id}
                   link={`/meet-the-team/${member.id}`}
-                  image={member.image}
+                  image="/images/members.png"
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
                   lastName={member.lastName}
@@ -221,7 +218,7 @@ export default function MeetTheTeamPage() {
                 <ProfileCard
                   key={member.id}
                   link={`/meet-the-team/${member.id}`}
-                  image={member.image}
+                  image="/images/members.png"
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
                   lastName={member.lastName}
@@ -252,7 +249,7 @@ export default function MeetTheTeamPage() {
                 <ProfileCard
                   key={member.id}
                   link={`/meet-the-team/${member.id}`}
-                  image={member.image}
+                  image="/images/members.png"
                   imageAlt={`${member.firstName} ${member.lastName}`}
                   firstName={member.firstName}
                   lastName={member.lastName}
